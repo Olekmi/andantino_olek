@@ -24,12 +24,14 @@ class App(Tk):
         self.hex_closest1 = []
         self.first_n = []
         self.hex_glob = []
+        self.glob_inter = []
         self.dir_1 = []
         self.dir_2 = []
         self.dir_3 = []
         self.dir_4 = []
         self.dir_5 = []
         self.dir_6 = []
+        self.first_hex = []
         self.len_diag1 = 0
         self.len_diag2 = 0
         self.len_diag3 = 0
@@ -151,6 +153,7 @@ class App(Tk):
                 first_neighs = self.neighbour(self.hexagons_board[i])
                 self.hex_glob = [self.hexagons_board[i]]
                 self.hexagons_white = [self.hexagons_board[i]]
+                self.first_hex = [self.hexagons_board[i]]
                 # print("glob",self.hex_glob)
                 # for j in first_neighs:
                 
@@ -413,6 +416,94 @@ class App(Tk):
         print("hex_closest", self.hex_closest1.row, self.hex_closest1.col)
         return self.hexagons_board[distances.index(min(distances))]
 
+    def find_circle (self, hex_center):
+        inter = []
+        first = []
+        inter1 = []
+        look_boucle1 = []
+        line2 = []
+        # self.glob_inter = self.hexagons_white
+        for hex_center in self.hexagons_white:
+            line = []
+            # first = list(hex_center)
+            # print("class hex",type(first))
+            # first = self.hexagons_white[hex_center]
+            print("Jedziemy z hex_centrem",[hex_center.row,hex_center.col])
+            for k in range(len(self.glob_inter)):
+                neighs = self.neighbour(hex_center)
+                neighs.append(self.hexagons_white[k])
+                inter = self.intersection(neighs)
+                # print("class inter",type(inter))
+                # print("dlugosc inter",len(inter))
+                for i in inter:
+                    print("inter",[i.row,i.col]) 
+                # print("inter",inter)
+                if len(inter) > 0: #look if i find a hex within neighbourhood of my hex. So with have got a first pair
+                    line2.append(self.glob_inter)
+                    look_boucle = self.intersection(inter)
+                    # inter = list(inter)
+                    # for i in range(len(inter)):
+                    #     line.append(i)
+                    line.append(self.first_hex[0])
+                    for i in inter:
+                        
+                        line.append(i)
+                        print("Line", line)
+                        print("glob line", self.glob_inter)
+                    # for m in line:
+                    #     print("Line:",[m.row,m.col])                     
+                    # for e in range(len(line)):
+                    #     print("Line:",[line[e].row,line[e].col]) 
+                    for i in look_boucle:
+                        print("look_boucle",[i.row, i.col]) 
+                        if look_boucle == hex_center:
+                            break
+       
+                    for i in inter:
+                        print("Jedziemy z inter_centrem",[i.row,i.col])
+                        self.glob_inter = list(set(self.glob_inter)- set(line))
+                        neighs2 = self.neighbour(i)
+                        for k in range(len(self.glob_inter)):
+                            print("ktory glob hex",[self.glob_inter[k].row,self.glob_inter[k].col])
+                            # neighs1 = self.neighbour(i)
+                            neighs2.append(self.glob_inter[k])
+                            inter1 = self.intersection(neighs2)
+                            print("dlugosc inter1",len(inter1))
+                            for i in inter1:
+                                print("inter1",[i.row,i.col]) 
+                            for i in inter1:
+                                # print("last hex_i",i)
+                                print("first hex_i",[self.first_hex[0].row,self.first_hex[0].col])
+                                look_boucle = self.neighbour(i)
+                                look_boucle.append(self.first_hex[0])
+                                print("loop neigh",look_boucle)
+                            look_boucle1 = self.intersection(look_boucle)
+                            # for i in range(len(look_boucle1)):
+                            #     print("loop last",look_boucle1[i])
+                            for i in look_boucle1:
+                                print("loop last",i) 
+                                print("loop wdwd",look_boucle1)
+                            if self.first_hex[0] == look_boucle1 and len(line)>6:
+                                print("La boucle est bouclee")                            
+                                break
+                            if len(inter1)>0  and inter1 not in line:
+                                inter = inter1
+                                for i in inter:
+
+                                    line.append(i)
+                                    print("Line", line)
+                                    # print("glob line", self.glob_inter)
+                                            
+                                # for k in range(len(line)):
+                                #     print("Line:",[line[k].row,line[k].col]) 
+                                # for k in line:
+                                #     print("Line:",[k.row,k.col]) 
+                        
+
+
+
+
+
     def diag1_line5_white (self, hex_center):
         j = [-1,-2,-3,-4]
         for hex_center in self.hexagons_white:
@@ -650,7 +741,11 @@ class App(Tk):
                         for i in range(len(self.hexagons_white)):
                             self.diag3_line5_white(self.hexagons_white)
                             self.diag2_line5_white(self.hexagons_white)
-                            self.diag1_line5_white(self.hexagons_white)                
+                            self.diag1_line5_white(self.hexagons_white)
+                    if len(self.hexagons_white)>2:
+                        self.glob_inter = self.hexagons_white
+                        for i in range(len(self.glob_inter)):
+                            self.find_circle(self.glob_inter)       
                     
                 else:
                     self.draw_black(self.can,hex_closest,self.size)
