@@ -414,73 +414,56 @@ class App(Tk):
         return self.hexagons_board[distances.index(min(distances))]
 
     def diag1_line5_white (self, hex_center):
-        j = [0,-1,-1,-2]
+        j = [-1,-2,-3,-4]
         for hex_center in self.hexagons_white:
-            if hex_center.row % 2 == 0:
-                for i in range(4):
-                    for k in range(len(self.hexagons_white)):
-                        if self.hexagons_white[k].col == hex_center.col + j[i] and self.hexagons_white[k].row == hex_center.row and self.hexagons_white[k] not in white:
-                            white.append(self.hexagons_white[k])
-                            if len(white) > 3:
-                                print("You won! - white.dir_1")  
-                                for p in range(len(white)):
-                                    print("white11",[white[p].row,white[p].col]) 
-            else:
-                for o in range(4):
-                    for t in range(len(self.hexagons_white)):
-                        if self.hexagons_white[t].col == hex_center.col + h[o] and self.hexagons_white[t].row == hex_center.row and self.hexagons_white[t] not in white:
-                            white.append(self.hexagons_white[t])                    
-                            if len(white) > 3:
-                                print("You won! - white.dir_1") 
-                                for i in range(len(white)):
-                                    print("white_list",[white[i].row,white[i].col]) 
+            white = []
+            for i in range(4):
+                for k in range(len(self.hexagons_white)):
+                    if self.hexagons_white[k].col == hex_center.col + j[i] and self.hexagons_white[k].row == hex_center.row and self.hexagons_white[k] not in white:
+                        white.append(self.hexagons_white[k])
+                        if len(white) > 3:
+                            print("You won! - white.dir_1")  
+                            for p in range(len(white)):
+                                print("white11",[white[p].row,white[p].col]) 
 
-    def diag1_line5_white (self, hex_center):
-        j = [0,-1,-1,-2]
-        for hex_center in self.hexagons_white:
-            if hex_center.row % 2 == 0:
-                for i in range(4):
-                    for k in range(len(self.hexagons_white)):
-                        if self.hexagons_white[k].col == hex_center.col + j[i] and self.hexagons_white[k].row == hex_center.row and self.hexagons_white[k] not in white:
-                            white.append(self.hexagons_white[k])
-                            if len(white) > 3:
-                                print("You won! - white.dir_1")  
-                                for p in range(len(white)):
-                                    print("white11",[white[p].row,white[p].col]) 
-            else:
-                for o in range(4):
-                    for t in range(len(self.hexagons_white)):
-                        if self.hexagons_white[t].col == hex_center.col + h[o] and self.hexagons_white[t].row == hex_center.row and self.hexagons_white[t] not in white:
-                            white.append(self.hexagons_white[t])                    
-                            if len(white) > 3:
-                                print("You won! - white.dir_1") 
-                                for i in range(len(white)):
-                                    print("white_list",[white[i].row,white[i].col]) 
 
-    def diag2_line5_black (self, hex_center):
+    def diag1_line5_black (self, hex_center):
+        j = [-1,-2,-3,-4]
+        for hex_center in self.hexagons_black:
+            black = []
+            for i in range(4):
+                for k in range(len(self.hexagons_black)):
+                    if self.hexagons_black[k].col == hex_center.col + j[i] and self.hexagons_black[k].row == hex_center.row and self.hexagons_black[k] not in black:
+                        black.append(self.hexagons_black[k])
+                        if len(black) > 3:
+                            print("You won! - black.dir_1")  
+                            for p in range(len(black)):
+                                print("black11",[black[p].row,black[p].col]) 
+
+    def diag2_line5_white (self, hex_center):
         h = [-1,-1,-2,-2]
         j = [0,-1,-1,-2]
         z = [-1,-2,-3,-4]
-        for hex_center in self.hexagons_black:
-            black = []
+        for hex_center in self.hexagons_white:
+            white = []
             if hex_center.row % 2 == 0:   
                 for i in range(4):
-                    for k in range(len(self.hexagons_black)):
-                        if self.hexagons_black[k].col == hex_center.col + j[i] and self.hexagons_black[k].row == hex_center.row +z[i] and self.hexagons_black[k] not in black:
-                            black.append(self.hexagons_black[k])
-                            if len(black) > 3:
-                                print("You won! - black.dir_2")  
-                                for p in range(len(black)):
-                                    print("black33",[black[p].row,black[p].col]) 
+                    for k in range(len(self.hexagons_white)):
+                        if self.hexagons_white[k].col == hex_center.col + j[i] and self.hexagons_white[k].row == hex_center.row +z[i] and self.hexagons_white[k] not in white:
+                            white.append(self.hexagons_white[k])
+                            if len(white) > 3:
+                                print("You won! - white.dir_2")  
+                                for p in range(len(white)):
+                                    print("white33",[white[p].row,white[p].col]) 
             else:
                 for o in range(4):
-                    for t in range(len(self.hexagons_black)):
-                        if self.hexagons_black[t].col == hex_center.col + h[o] and self.hexagons_black[t].row == hex_center.row + z[o] and self.hexagons_black[t] not in black:
-                            black.append(self.hexagons_black[t])                    
-                            if len(black) > 3:
-                                print("You won! - black.dir2") 
-                                for i in range(len(black)):
-                                    print("black_list",[black[i].row,black[i].col])    
+                    for t in range(len(self.hexagons_white)):
+                        if self.hexagons_white[t].col == hex_center.col + h[o] and self.hexagons_white[t].row == hex_center.row + z[o] and self.hexagons_white[t] not in white:
+                            white.append(self.hexagons_white[t])                    
+                            if len(white) > 3:
+                                print("You won! - white.dir2") 
+                                for i in range(len(white)):
+                                    print("white_list",[white[i].row,white[i].col])    
 
     def diag2_line5_black (self, hex_center):
         h = [-1,-1,-2,-2]
@@ -516,7 +499,7 @@ class App(Tk):
         
         for hex_center in self.hexagons_white:
             white = []
-            print("SPRAWDZAMY PASSE dla:",[hex_center.row, hex_center.col])
+            # print("SPRAWDZAMY PASSE dla:",[hex_center.row, hex_center.col])
             # z = -1
             if hex_center.row % 2 == 0:
                 for i in range(4):
@@ -577,7 +560,7 @@ class App(Tk):
         
         for hex_center in self.hexagons_black:
             black = []
-            print("SPRAWDZAMY PASSE dla:",[hex_center.row, hex_center.col])
+            # print("SPRAWDZAMY PASSE dla:",[hex_center.row, hex_center.col])
             # z = -1
             if hex_center.row % 2 == 0:
                 for i in range(4):
@@ -667,7 +650,7 @@ class App(Tk):
                         for i in range(len(self.hexagons_white)):
                             self.diag3_line5_white(self.hexagons_white)
                             self.diag2_line5_white(self.hexagons_white)
-                            # self.diag1_line5_white(self.hexagons_white)                
+                            self.diag1_line5_white(self.hexagons_white)                
                     
                 else:
                     self.draw_black(self.can,hex_closest,self.size)
@@ -678,8 +661,8 @@ class App(Tk):
                     if len(self.hexagons_black)>4:
                         for i in range(len(self.hexagons_black)):
                             self.diag3_line5_black(self.hexagons_black)
-                            # self.diag2_line5_black(self.hexagons_black)
-                            # self.diag1_line5_black(self.hexagons_black)
+                            self.diag2_line5_black(self.hexagons_black)
+                            self.diag1_line5_black(self.hexagons_black)
                 # self.start = 0
             # else:
             #     print("Impossible move")                  
