@@ -4,6 +4,8 @@ from pygame.locals import *
 from math import cos, sin,radians,sqrt
 import collections 
 from hexagon import *
+import numpy
+from numpy import concatenate
 
 class App(Tk):
     def __init__(self):
@@ -35,6 +37,8 @@ class App(Tk):
         self.len_diag1 = 0
         self.len_diag2 = 0
         self.len_diag3 = 0
+        self.glob_line = []
+        self.loop_on = 0
         self.initGrid(20, 20, self.size)
         # print("number of hexes in total : " + str(len(self.hexagons)))
         self.create_hexes_board()
@@ -446,52 +450,85 @@ class App(Tk):
                     #     line.append(i)
                     line.append(self.first_hex[0])
                     for i in inter:
-                        
-                        line.append(i)
-                        print("Line", line)
-                        print("glob line", self.glob_inter)
+                        if i not in line:
+                            line.append(i)
+                            print("Line_first_loop", line)
+                            # print("glob line", self.glob_inter)
                     # for m in line:
                     #     print("Line:",[m.row,m.col])                     
                     # for e in range(len(line)):
                     #     print("Line:",[line[e].row,line[e].col]) 
-                    for i in look_boucle:
-                        print("look_boucle",[i.row, i.col]) 
-                        if look_boucle == hex_center:
-                            break
+                    # for i in look_boucle:
+                    #     # print("look_boucle",[i.row, i.col]) 
+                    #     if look_boucle == hex_center:
+                    #         break
        
                     for i in inter:
                         print("Jedziemy z inter_centrem",[i.row,i.col])
                         self.glob_inter = list(set(self.glob_inter)- set(line))
                         neighs2 = self.neighbour(i)
                         for k in range(len(self.glob_inter)):
-                            print("ktory glob hex",[self.glob_inter[k].row,self.glob_inter[k].col])
+                            # print("ktory glob hex",[self.glob_inter[k].row,self.glob_inter[k].col])
                             # neighs1 = self.neighbour(i)
                             neighs2.append(self.glob_inter[k])
                             inter1 = self.intersection(neighs2)
-                            print("dlugosc inter1",len(inter1))
+                            # print("dlugosc inter1",len(inter1))
                             for i in inter1:
                                 print("inter1",[i.row,i.col]) 
                             for i in inter1:
                                 # print("last hex_i",i)
-                                print("first hex_i",[self.first_hex[0].row,self.first_hex[0].col])
+                                # print("first hex_i",[self.first_hex[0].row,self.first_hex[0].col])
                                 look_boucle = self.neighbour(i)
                                 look_boucle.append(self.first_hex[0])
-                                print("loop neigh",look_boucle)
+                                # print("loop neigh",look_boucle)
                             look_boucle1 = self.intersection(look_boucle)
                             # for i in range(len(look_boucle1)):
                             #     print("loop last",look_boucle1[i])
-                            for i in look_boucle1:
-                                print("loop last",i) 
-                                print("loop wdwd",look_boucle1)
+                            # for i in look_boucle1:
+                            #     # print("loop last",i) 
+                            #     # print("loop wdwd",look_boucle1)
+
+                            check_tail = []
+                            tail_hood1 = []
+                            tail_hood = []
+                            for i in range(len(line)-6):
+                                tail_hood1 = self.neighbour(line[i])
+                                # print("YWhich i in tailhood",i)
+                                # print("Yupi! tail hood",tail_hood1)
+                                if tail_hood1 not in tail_hood:
+                                    for i in tail_hood1:
+                                        tail_hood.append(i)
+                                    tail_hood.append(line[-1])
+                                    # tail_hood = self.neighbour(line[i])
+                                    # for i in tail_hood:
+                                        # print("Yupi!2 tail hood",[i.row,i.col])
+                                    # tail_hood=set(tail_hood)
+                                    check_tail = self.intersection(tail_hood)
+                                    # print("Yupi! checktail",check_tail) 
+                                    # for i in line[-1:]:
+                                        # print("Yupi! last line hex",[i.row,i.col])
+                                    # for i in check_tail:
+                                    #     print("Yupi! check_tail done",[i.row,i.col])
+                            if len(check_tail)>0 and len(line)>5:
+                                print("Yupi! La boucle est bouclee") 
+                                self.loop_on = 1
+                                print("loop is on",self.loop_on)
+
+                            # if line[-1:] == self.intersection(look_boucle1):
+                            #     print("Olek miales racje")
                             if self.first_hex[0] == look_boucle1 and len(line)>6:
-                                print("La boucle est bouclee")                            
+                                print("La boucle est bouclee")
+                                self.loop_on = 1
+                                print("loop is on",self.loop_on)
                                 break
                             if len(inter1)>0  and inter1 not in line:
                                 inter = inter1
                                 for i in inter:
-
+                                    # if i not in line:
                                     line.append(i)
-                                    print("Line", line)
+                                    for i in line:
+                                        print("Line",[i.row,i.col] )
+                                self.glob_line = line
                                     # print("glob line", self.glob_inter)
                                             
                                 # for k in range(len(line)):
@@ -499,8 +536,57 @@ class App(Tk):
                                 # for k in line:
                                 #     print("Line:",[k.row,k.col]) 
                         
+    def center_loop (self, hex_center):
+        my_center = []
+        for hex_center in self.glob_line:
+            for i in range(len(self.glob_line)):
+                print("int hex",hex_center)
+                my_center_row = sum(hex_center.row)
+                # my_center_col = (sum(self.glob_line[i].col))/len(self.glob_line) 
+                # my_center.append([int(round(my_center_row)),int(round(my_center_col))])
+                # print("my_loop_center",[my_center_row, my_center_col])
+                print("my_loop_center",[my_center_row])
+                # print("my_loop_center",my_center)
+                # int(round(x))
 
 
+    def flood_fill (self, hex_center,neighs):
+        flag_neigh = 0
+        neigh = []
+        check = []
+        # for i in neighs:
+       
+        while flag_neigh != 1:
+            for a in range(len(neighs)):
+                check = numpy.concatenate(([neighs[a], self.hexagons_board]), axis=None)
+                # print("check",check)
+                # for b in range(len(self.hexagons_board)):
+                # check.append(self.hexagons_board[b])
+                if self.intersection(check) == 0:
+                    print("Flooded")
+                    flag_neigh = 1
+                    break
+                else:
+                    print("La boucle est bouclée!!")
+            for i in range(len(neighs)):
+                [neighs[i]].append(self.hexagons_board)
+                print("neighs[i]",neighs[i])
+                if self.intersection([neighs[i]]) == 0:
+                    print("La boucle est bouclée!!")
+                    flag_neigh = 1
+                    break
+            for k in hex_center:
+                # for i in range(len(self.hexagons_board)):
+                neigh = self.neighbour(k)
+                for i in neigh:
+                    if i.color == k.color or i.color == "" and i not in neighs:
+                        neighs.append(i)
+                        print("neighs",[i.row,i.col])                           
+                    else:
+                        flag_neigh = 1
+                        break
+            for neighs in range(6):
+                self.flood_fill(self.hexagons_board,neighs)
 
 
 
@@ -743,10 +829,15 @@ class App(Tk):
                             self.diag2_line5_white(self.hexagons_white)
                             self.diag1_line5_white(self.hexagons_white)
                     if len(self.hexagons_white)>2:
-                        self.glob_inter = self.hexagons_white
-                        for i in range(len(self.glob_inter)):
-                            self.find_circle(self.glob_inter)       
-                    
+                        # self.glob_inter = self.hexagons_white
+                        for i in range(len(self.hexagons_black)):
+                            self.flood_fill(self.hexagons_black,self.hexagons_black)
+                            # if self.loop_on == 1:
+                            #     print("found a loop =", self.loop_on)
+                    if self.loop_on == 1:
+                        print("found a loop =", self.loop_on)
+                        for i in self.glob_line:
+                            self.center_loop(i)                 
                 else:
                     self.draw_black(self.can,hex_closest,self.size)
                     self.hexagons_black.append(hex_closest)
@@ -758,6 +849,10 @@ class App(Tk):
                             self.diag3_line5_black(self.hexagons_black)
                             self.diag2_line5_black(self.hexagons_black)
                             self.diag1_line5_black(self.hexagons_black)
+                    # if len(self.hexagons_black)>2:
+                    #     # self.glob_inter = self.hexagons_white
+                    #     for i in range(len(self.hexagons_white)):
+                    #         self.flood_fill(self.hexagons_white)
                 # self.start = 0
             # else:
             #     print("Impossible move")                  
