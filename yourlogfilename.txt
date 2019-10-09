@@ -1,0 +1,3325 @@
+Hello world !
+Printing inclusive range
+hex_closest 10 10
+hex_closest 10 9
+hex_closest 9 11
+hex_closest 9 10
+hex_closest 8 10
+hex center [10, 10]
+neigh [10, 9]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [9, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [11, 10]
+hex center [11, 10]
+neigh [11, 9]
+hex center [11, 9]
+neigh [11, 8]
+hex center [11, 8]
+neigh [11, 7]
+hex center [11, 7]
+neigh [11, 6]
+hex center [11, 6]
+neigh [11, 5]
+hex center [11, 5]
+neigh [11, 4]
+hex center [11, 4]
+neigh [11, 3]
+hex center [11, 3]
+neigh [11, 2]
+hex_center flood [11, 2]
+hex_center flood [11, 2]
+hex_center in prev_hexes play on!
+neigh [10, 3]
+hex center [10, 3]
+neigh [10, 2]
+hex center [10, 2]
+neigh [10, 1]
+hex_center flood [10, 1]
+hex_center flood [10, 1]
+hex_center in prev_hexes play on!
+neigh [9, 3]
+hex center [9, 3]
+neigh [9, 2]
+hex center [9, 2]
+neigh [9, 1]
+hex_center flood [9, 1]
+hex_center flood [9, 1]
+hex_center in prev_hexes play on!
+neigh [8, 2]
+hex center [8, 2]
+neigh [8, 1]
+hex_center flood [8, 1]
+hex_center flood [8, 1]
+hex_center in prev_hexes play on!
+neigh [10, 2]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 3]
+hex center [8, 3]
+neigh [8, 2]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 3]
+hex center [7, 3]
+neigh [7, 2]
+hex_center flood [7, 2]
+hex_center flood [7, 2]
+hex_center in prev_hexes play on!
+neigh [9, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 4]
+hex center [7, 4]
+neigh [7, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 3]
+hex center [6, 3]
+neigh [6, 2]
+hex_center flood [6, 2]
+hex_center flood [6, 2]
+hex_center in prev_hexes play on!
+neigh [8, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 4]
+hex center [6, 4]
+neigh [6, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 4]
+hex center [5, 4]
+neigh [5, 3]
+hex_center flood [5, 3]
+hex_center flood [5, 3]
+hex_center in prev_hexes play on!
+neigh [7, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 5]
+hex center [5, 5]
+neigh [5, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 4]
+hex center [4, 4]
+neigh [4, 3]
+hex_center flood [4, 3]
+hex_center flood [4, 3]
+hex_center in prev_hexes play on!
+neigh [6, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 5]
+hex center [4, 5]
+neigh [4, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 5]
+hex center [3, 5]
+neigh [3, 4]
+hex_center flood [3, 4]
+hex_center flood [3, 4]
+hex_center in prev_hexes play on!
+neigh [5, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 6]
+hex center [3, 6]
+neigh [3, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 5]
+hex center [2, 5]
+neigh [2, 4]
+hex_center flood [2, 4]
+hex_center flood [2, 4]
+hex_center in prev_hexes play on!
+neigh [4, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 6]
+hex center [2, 6]
+neigh [2, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 6]
+hex center [1, 6]
+neigh [1, 5]
+hex_center flood [1, 5]
+hex_center flood [1, 5]
+hex_center in prev_hexes play on!
+neigh [3, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 7]
+hex center [1, 7]
+neigh [1, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 6]
+hex_center flood [0, 6]
+hex_center flood [0, 6]
+hex_center in prev_hexes play on!
+neigh [2, 7]
+hex center [2, 7]
+neigh [2, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 7]
+hex center [3, 7]
+neigh [3, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 6]
+hex center [4, 6]
+neigh [4, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 6]
+hex center [5, 6]
+neigh [5, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 5]
+hex center [6, 5]
+neigh [6, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 5]
+hex center [7, 5]
+neigh [7, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 4]
+hex center [8, 4]
+neigh [8, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 4]
+hex center [9, 4]
+neigh [9, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 4]
+hex center [10, 4]
+neigh [10, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 5]
+hex center [9, 5]
+neigh [9, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 5]
+hex center [8, 5]
+neigh [8, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 6]
+hex center [7, 6]
+neigh [7, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 6]
+hex center [6, 6]
+neigh [6, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 7]
+hex center [5, 7]
+neigh [5, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 7]
+hex center [4, 7]
+neigh [4, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 8]
+hex center [3, 8]
+neigh [3, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 8]
+hex center [2, 8]
+neigh [2, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 8]
+hex center [1, 8]
+neigh [1, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 7]
+hex_center flood [0, 7]
+hex_center flood [0, 7]
+hex_center in prev_hexes play on!
+neigh [3, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 9]
+hex center [1, 9]
+neigh [1, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 8]
+hex_center flood [0, 8]
+hex_center flood [0, 8]
+hex_center in prev_hexes play on!
+neigh [2, 9]
+hex center [2, 9]
+neigh [2, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 9]
+hex center [3, 9]
+neigh [3, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 8]
+hex center [4, 8]
+neigh [4, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 8]
+hex center [5, 8]
+neigh [5, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 7]
+hex center [6, 7]
+neigh [6, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 7]
+hex center [7, 7]
+neigh [7, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 6]
+hex center [8, 6]
+neigh [8, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 6]
+hex center [9, 6]
+neigh [9, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 5]
+hex center [10, 5]
+neigh [10, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 6]
+hex center [10, 6]
+neigh [10, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 7]
+hex center [9, 7]
+neigh [9, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 7]
+hex center [8, 7]
+neigh [8, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 8]
+hex center [7, 8]
+neigh [7, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 8]
+hex center [6, 8]
+neigh [6, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 9]
+hex center [5, 9]
+neigh [5, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 9]
+hex center [4, 9]
+neigh [4, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 10]
+hex center [3, 10]
+neigh [3, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 10]
+hex center [2, 10]
+neigh [2, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 10]
+hex center [1, 10]
+neigh [1, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 9]
+hex_center flood [0, 9]
+hex_center flood [0, 9]
+hex_center in prev_hexes play on!
+neigh [3, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 11]
+hex center [1, 11]
+neigh [1, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 10]
+hex_center flood [0, 10]
+hex_center flood [0, 10]
+hex_center in prev_hexes play on!
+neigh [2, 11]
+hex center [2, 11]
+neigh [2, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 11]
+hex center [3, 11]
+neigh [3, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 10]
+hex center [4, 10]
+neigh [4, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 10]
+hex center [5, 10]
+neigh [5, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 9]
+hex center [6, 9]
+neigh [6, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 9]
+hex center [7, 9]
+neigh [7, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 8]
+hex center [8, 8]
+neigh [8, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 8]
+hex center [9, 8]
+neigh [9, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 7]
+hex center [10, 7]
+neigh [10, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 8]
+hex center [10, 8]
+neigh [10, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 9]
+hex center [9, 9]
+neigh [9, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 9]
+hex center [8, 9]
+neigh [8, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 10]
+hex center [7, 10]
+neigh [7, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 10]
+hex center [6, 10]
+neigh [6, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 11]
+hex center [5, 11]
+neigh [5, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 11]
+hex center [4, 11]
+neigh [4, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 12]
+hex center [3, 12]
+neigh [3, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 12]
+hex center [2, 12]
+neigh [2, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 12]
+hex center [1, 12]
+neigh [1, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 11]
+hex_center flood [0, 11]
+hex_center flood [0, 11]
+hex_center in prev_hexes play on!
+neigh [3, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 13]
+hex center [1, 13]
+neigh [1, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 12]
+hex_center flood [0, 12]
+hex_center flood [0, 12]
+hex_center in prev_hexes play on!
+neigh [2, 13]
+hex center [2, 13]
+neigh [2, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 13]
+hex center [3, 13]
+neigh [3, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 12]
+hex center [4, 12]
+neigh [4, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 12]
+hex center [5, 12]
+neigh [5, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 11]
+hex center [6, 11]
+neigh [6, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 11]
+hex center [7, 11]
+neigh [7, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [6, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 11]
+hex center [8, 11]
+neigh [8, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [7, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 11]
+hex center [9, 11]
+neigh [9, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [8, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [10, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 11]
+hex center [10, 11]
+neigh [10, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 11]
+hex center [11, 11]
+neigh [11, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 10]
+hex center [12, 10]
+neigh [12, 9]
+hex center [12, 9]
+neigh [12, 8]
+hex center [12, 8]
+neigh [12, 7]
+hex center [12, 7]
+neigh [12, 6]
+hex center [12, 6]
+neigh [12, 5]
+hex center [12, 5]
+neigh [12, 4]
+hex center [12, 4]
+neigh [12, 3]
+hex center [12, 3]
+neigh [12, 2]
+hex_center flood [12, 2]
+hex_center flood [12, 2]
+hex_center in prev_hexes play on!
+neigh [11, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 4]
+hex center [13, 4]
+neigh [13, 3]
+hex_center flood [13, 3]
+hex_center flood [13, 3]
+hex_center in prev_hexes play on!
+neigh [11, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 5]
+hex center [13, 5]
+neigh [13, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 4]
+hex center [14, 4]
+neigh [14, 3]
+hex_center flood [14, 3]
+hex_center flood [14, 3]
+hex_center in prev_hexes play on!
+neigh [12, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 5]
+hex center [14, 5]
+neigh [14, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 5]
+hex center [15, 5]
+neigh [15, 4]
+hex_center flood [15, 4]
+hex_center flood [15, 4]
+hex_center in prev_hexes play on!
+neigh [13, 6]
+hex center [13, 6]
+neigh [13, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 6]
+hex center [14, 6]
+neigh [14, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 6]
+hex center [15, 6]
+neigh [15, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 5]
+hex center [16, 5]
+neigh [16, 4]
+hex_center flood [16, 4]
+hex_center flood [16, 4]
+hex_center in prev_hexes play on!
+neigh [14, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 6]
+hex center [16, 6]
+neigh [16, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 6]
+hex center [17, 6]
+neigh [17, 5]
+hex_center flood [17, 5]
+hex_center flood [17, 5]
+hex_center in prev_hexes play on!
+neigh [15, 7]
+hex center [15, 7]
+neigh [15, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 7]
+hex center [14, 7]
+neigh [14, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 7]
+hex center [13, 7]
+neigh [13, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 8]
+hex center [13, 8]
+neigh [13, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 8]
+hex center [14, 8]
+neigh [14, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 8]
+hex center [15, 8]
+neigh [15, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 7]
+hex center [16, 7]
+neigh [16, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 7]
+hex center [17, 7]
+neigh [17, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 6]
+hex_center flood [18, 6]
+hex_center flood [18, 6]
+hex_center in prev_hexes play on!
+neigh [15, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 8]
+hex center [16, 8]
+neigh [16, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 8]
+hex center [17, 8]
+neigh [17, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 7]
+hex_center flood [18, 7]
+hex_center flood [18, 7]
+hex_center in prev_hexes play on!
+neigh [15, 9]
+hex center [15, 9]
+neigh [15, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 9]
+hex center [14, 9]
+neigh [14, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 9]
+hex center [13, 9]
+neigh [13, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 10]
+hex center [13, 10]
+neigh [13, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 10]
+hex center [14, 10]
+neigh [14, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 10]
+hex center [15, 10]
+neigh [15, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 9]
+hex center [16, 9]
+neigh [16, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 9]
+hex center [17, 9]
+neigh [17, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 8]
+hex_center flood [18, 8]
+hex_center flood [18, 8]
+hex_center in prev_hexes play on!
+neigh [15, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 10]
+hex center [16, 10]
+neigh [16, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 10]
+hex center [17, 10]
+neigh [17, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 9]
+hex_center flood [18, 9]
+hex_center flood [18, 9]
+hex_center in prev_hexes play on!
+neigh [15, 11]
+hex center [15, 11]
+neigh [15, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 11]
+hex center [14, 11]
+neigh [14, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 11]
+hex center [13, 11]
+neigh [13, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 11]
+hex center [12, 11]
+neigh [12, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 12]
+hex center [11, 12]
+neigh [11, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 12]
+hex center [10, 12]
+neigh [10, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 12]
+hex center [9, 12]
+neigh [9, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 12]
+hex center [8, 12]
+neigh [8, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 12]
+hex center [7, 12]
+neigh [7, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 12]
+hex center [6, 12]
+neigh [6, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 13]
+hex center [5, 13]
+neigh [5, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 13]
+hex center [4, 13]
+neigh [4, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 14]
+hex center [3, 14]
+neigh [3, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 14]
+hex center [2, 14]
+neigh [2, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 14]
+hex center [1, 14]
+neigh [1, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [0, 13]
+hex_center flood [0, 13]
+hex_center flood [0, 13]
+hex_center in prev_hexes play on!
+neigh [3, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 15]
+hex_center flood [1, 15]
+hex_center flood [1, 15]
+hex_center in prev_hexes play on!
+neigh [4, 14]
+hex center [4, 14]
+neigh [4, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 14]
+hex center [5, 14]
+neigh [5, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 13]
+hex center [6, 13]
+neigh [6, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 13]
+hex center [7, 13]
+neigh [7, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 13]
+hex center [8, 13]
+neigh [8, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 13]
+hex center [9, 13]
+neigh [9, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 13]
+hex center [10, 13]
+neigh [10, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 13]
+hex center [11, 13]
+neigh [11, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 12]
+hex center [12, 12]
+neigh [12, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 12]
+hex center [13, 12]
+neigh [13, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 12]
+hex center [14, 12]
+neigh [14, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 12]
+hex center [15, 12]
+neigh [15, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 11]
+hex center [16, 11]
+neigh [16, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 11]
+hex center [17, 11]
+neigh [17, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 10]
+hex_center flood [18, 10]
+hex_center flood [18, 10]
+hex_center in prev_hexes play on!
+neigh [15, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 12]
+hex center [16, 12]
+neigh [16, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 12]
+hex center [17, 12]
+neigh [17, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 11]
+hex_center flood [18, 11]
+hex_center flood [18, 11]
+hex_center in prev_hexes play on!
+neigh [15, 13]
+hex center [15, 13]
+neigh [15, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 13]
+hex center [14, 13]
+neigh [14, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 13]
+hex center [13, 13]
+neigh [13, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 13]
+hex center [12, 13]
+neigh [12, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 14]
+hex center [11, 14]
+neigh [11, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 14]
+hex center [10, 14]
+neigh [10, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 14]
+hex center [9, 14]
+neigh [9, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 14]
+hex center [8, 14]
+neigh [8, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 14]
+hex center [7, 14]
+neigh [7, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 14]
+hex center [6, 14]
+neigh [6, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 15]
+hex center [5, 15]
+neigh [5, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 15]
+hex center [4, 15]
+neigh [4, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 15]
+hex center [3, 15]
+neigh [3, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 15]
+hex_center flood [2, 15]
+hex_center flood [2, 15]
+hex_center in prev_hexes play on!
+neigh [5, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 16]
+hex_center flood [3, 16]
+hex_center flood [3, 16]
+hex_center in prev_hexes play on!
+neigh [6, 15]
+hex center [6, 15]
+neigh [6, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 15]
+hex center [7, 15]
+neigh [7, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 15]
+hex center [8, 15]
+neigh [8, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 15]
+hex center [9, 15]
+neigh [9, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 15]
+hex center [10, 15]
+neigh [10, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 15]
+hex center [11, 15]
+neigh [11, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 14]
+hex center [12, 14]
+neigh [12, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 14]
+hex center [13, 14]
+neigh [13, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 14]
+hex center [14, 14]
+neigh [14, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 14]
+hex center [15, 14]
+neigh [15, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 13]
+hex center [16, 13]
+neigh [16, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 13]
+hex center [17, 13]
+neigh [17, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 12]
+hex_center flood [18, 12]
+hex_center flood [18, 12]
+hex_center in prev_hexes play on!
+neigh [15, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 14]
+hex center [16, 14]
+neigh [16, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 14]
+hex center [17, 14]
+neigh [17, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [18, 13]
+hex_center flood [18, 13]
+hex_center flood [18, 13]
+hex_center in prev_hexes play on!
+neigh [15, 15]
+hex center [15, 15]
+neigh [15, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 15]
+hex center [14, 15]
+neigh [14, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 15]
+hex center [13, 15]
+neigh [13, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 15]
+hex center [12, 15]
+neigh [12, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 16]
+hex center [11, 16]
+neigh [11, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 16]
+hex center [10, 16]
+neigh [10, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 16]
+hex center [9, 16]
+neigh [9, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 16]
+hex center [8, 16]
+neigh [8, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 16]
+hex center [7, 16]
+neigh [7, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 16]
+hex center [6, 16]
+neigh [6, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 16]
+hex center [5, 16]
+neigh [5, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 16]
+hex_center flood [4, 16]
+hex_center flood [4, 16]
+hex_center in prev_hexes play on!
+neigh [7, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 17]
+hex_center flood [5, 17]
+hex_center flood [5, 17]
+hex_center in prev_hexes play on!
+neigh [8, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 17]
+hex center [7, 17]
+neigh [7, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 17]
+hex_center flood [6, 17]
+hex_center flood [6, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 17]
+hex center [8, 17]
+neigh [8, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 17]
+hex center [9, 17]
+neigh [9, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 17]
+hex center [10, 17]
+neigh [10, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 17]
+hex center [11, 17]
+neigh [11, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 16]
+hex center [12, 16]
+neigh [12, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 16]
+hex center [13, 16]
+neigh [13, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 16]
+hex_center flood [14, 16]
+hex_center flood [14, 16]
+hex_center in prev_hexes play on!
+neigh [11, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 17]
+hex_center flood [12, 17]
+hex_center flood [12, 17]
+hex_center in prev_hexes play on!
+neigh [10, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 17]
+hex_center flood [12, 17]
+hex_center flood [12, 17]
+hex_center in prev_hexes play on!
+neigh [9, 18]
+hex center [9, 18]
+neigh [9, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 18]
+hex_center flood [8, 18]
+hex_center flood [8, 18]
+hex_center in prev_hexes play on!
+neigh [10, 18]
+hex_center flood [10, 18]
+hex_center flood [10, 18]
+hex_center in prev_hexes play on!
+neigh [9, 18]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 18]
+hex_center flood [7, 18]
+hex_center flood [7, 18]
+hex_center in prev_hexes play on!
+neigh [9, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 17]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 16]
+hex_center flood [14, 16]
+hex_center flood [14, 16]
+hex_center in prev_hexes play on!
+neigh [16, 15]
+hex_center flood [16, 15]
+hex_center flood [16, 15]
+hex_center in prev_hexes play on!
+neigh [16, 15]
+hex_center flood [16, 15]
+hex_center flood [16, 15]
+hex_center in prev_hexes play on!
+neigh [17, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 16]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 15]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [16, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [17, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [14, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [15, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [13, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 14]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 13]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [7, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [9, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+hex_center in prev_hexes play on!
+neigh [10, 9]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [9, 10]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+hex_center in prev_hexes play on!
+neigh [10, 9]
+hex_center in self.hexagons_white play on!
+hex_center in self.hexagons_white play on!
+neigh [11, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 12]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 11]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 10]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 9]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [1, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [2, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [3, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [4, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [5, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [6, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [7, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [8, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [9, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 3]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 4]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 5]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 6]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 7]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [10, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [12, 8]
+hex_center in prev_hexes play on!
+hex_center in prev_hexes play on!
+neigh [11, 9]
+hex_center in prev_hexes play on!

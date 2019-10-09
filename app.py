@@ -7,6 +7,10 @@ from hexagon import *
 import numpy
 from numpy import concatenate
 
+# import sys
+# sys.stdout = open('stdout.txt', 'w')
+
+
 class App(Tk):
     def __init__(self):
         Tk.__init__(self)
@@ -38,6 +42,7 @@ class App(Tk):
         self.len_diag2 = 0
         self.len_diag3 = 0
         self.glob_line = []
+        self.flag_neigh = 0
         self.loop_on = 0
         self.initGrid(20, 20, self.size)
         # print("number of hexes in total : " + str(len(self.hexagons)))
@@ -420,175 +425,63 @@ class App(Tk):
         print("hex_closest", self.hex_closest1.row, self.hex_closest1.col)
         return self.hexagons_board[distances.index(min(distances))]
 
-    def find_circle (self, hex_center):
-        inter = []
-        first = []
-        inter1 = []
-        look_boucle1 = []
-        line2 = []
-        # self.glob_inter = self.hexagons_white
-        for hex_center in self.hexagons_white:
-            line = []
-            # first = list(hex_center)
-            # print("class hex",type(first))
-            # first = self.hexagons_white[hex_center]
-            print("Jedziemy z hex_centrem",[hex_center.row,hex_center.col])
-            for k in range(len(self.glob_inter)):
-                neighs = self.neighbour(hex_center)
-                neighs.append(self.hexagons_white[k])
-                inter = self.intersection(neighs)
-                # print("class inter",type(inter))
-                # print("dlugosc inter",len(inter))
-                for i in inter:
-                    print("inter",[i.row,i.col]) 
-                # print("inter",inter)
-                if len(inter) > 0: #look if i find a hex within neighbourhood of my hex. So with have got a first pair
-                    line2.append(self.glob_inter)
-                    look_boucle = self.intersection(inter)
-                    # inter = list(inter)
-                    # for i in range(len(inter)):
-                    #     line.append(i)
-                    line.append(self.first_hex[0])
-                    for i in inter:
-                        if i not in line:
-                            line.append(i)
-                            print("Line_first_loop", line)
-                            # print("glob line", self.glob_inter)
-                    # for m in line:
-                    #     print("Line:",[m.row,m.col])                     
-                    # for e in range(len(line)):
-                    #     print("Line:",[line[e].row,line[e].col]) 
-                    # for i in look_boucle:
-                    #     # print("look_boucle",[i.row, i.col]) 
-                    #     if look_boucle == hex_center:
-                    #         break
-       
-                    for i in inter:
-                        print("Jedziemy z inter_centrem",[i.row,i.col])
-                        self.glob_inter = list(set(self.glob_inter)- set(line))
-                        neighs2 = self.neighbour(i)
-                        for k in range(len(self.glob_inter)):
-                            # print("ktory glob hex",[self.glob_inter[k].row,self.glob_inter[k].col])
-                            # neighs1 = self.neighbour(i)
-                            neighs2.append(self.glob_inter[k])
-                            inter1 = self.intersection(neighs2)
-                            # print("dlugosc inter1",len(inter1))
-                            for i in inter1:
-                                print("inter1",[i.row,i.col]) 
-                            for i in inter1:
-                                # print("last hex_i",i)
-                                # print("first hex_i",[self.first_hex[0].row,self.first_hex[0].col])
-                                look_boucle = self.neighbour(i)
-                                look_boucle.append(self.first_hex[0])
-                                # print("loop neigh",look_boucle)
-                            look_boucle1 = self.intersection(look_boucle)
-                            # for i in range(len(look_boucle1)):
-                            #     print("loop last",look_boucle1[i])
-                            # for i in look_boucle1:
-                            #     # print("loop last",i) 
-                            #     # print("loop wdwd",look_boucle1)
-
-                            check_tail = []
-                            tail_hood1 = []
-                            tail_hood = []
-                            for i in range(len(line)-6):
-                                tail_hood1 = self.neighbour(line[i])
-                                # print("YWhich i in tailhood",i)
-                                # print("Yupi! tail hood",tail_hood1)
-                                if tail_hood1 not in tail_hood:
-                                    for i in tail_hood1:
-                                        tail_hood.append(i)
-                                    tail_hood.append(line[-1])
-                                    # tail_hood = self.neighbour(line[i])
-                                    # for i in tail_hood:
-                                        # print("Yupi!2 tail hood",[i.row,i.col])
-                                    # tail_hood=set(tail_hood)
-                                    check_tail = self.intersection(tail_hood)
-                                    # print("Yupi! checktail",check_tail) 
-                                    # for i in line[-1:]:
-                                        # print("Yupi! last line hex",[i.row,i.col])
-                                    # for i in check_tail:
-                                    #     print("Yupi! check_tail done",[i.row,i.col])
-                            if len(check_tail)>0 and len(line)>5:
-                                print("Yupi! La boucle est bouclee") 
-                                self.loop_on = 1
-                                print("loop is on",self.loop_on)
-
-                            # if line[-1:] == self.intersection(look_boucle1):
-                            #     print("Olek miales racje")
-                            if self.first_hex[0] == look_boucle1 and len(line)>6:
-                                print("La boucle est bouclee")
-                                self.loop_on = 1
-                                print("loop is on",self.loop_on)
-                                break
-                            if len(inter1)>0  and inter1 not in line:
-                                inter = inter1
-                                for i in inter:
-                                    # if i not in line:
-                                    line.append(i)
-                                    for i in line:
-                                        print("Line",[i.row,i.col] )
-                                self.glob_line = line
-                                    # print("glob line", self.glob_inter)
-                                            
-                                # for k in range(len(line)):
-                                #     print("Line:",[line[k].row,line[k].col]) 
-                                # for k in line:
-                                #     print("Line:",[k.row,k.col]) 
-                        
-    def center_loop (self, hex_center):
-        my_center = []
-        for hex_center in self.glob_line:
-            for i in range(len(self.glob_line)):
-                print("int hex",hex_center)
-                my_center_row = sum(hex_center.row)
-                # my_center_col = (sum(self.glob_line[i].col))/len(self.glob_line) 
-                # my_center.append([int(round(my_center_row)),int(round(my_center_col))])
-                # print("my_loop_center",[my_center_row, my_center_col])
-                print("my_loop_center",[my_center_row])
-                # print("my_loop_center",my_center)
-                # int(round(x))
-
-
-    def flood_fill (self, hex_center,neighs):
+    def flood_fill (self, hex_center,prev_hexes):
         flag_neigh = 0
         neigh = []
-        check = []
-        # for i in neighs:
-       
-        while flag_neigh != 1:
-            for a in range(len(neighs)):
-                check = numpy.concatenate(([neighs[a], self.hexagons_board]), axis=None)
-                # print("check",check)
-                # for b in range(len(self.hexagons_board)):
-                # check.append(self.hexagons_board[b])
-                if self.intersection(check) == 0:
-                    print("Flooded")
-                    flag_neigh = 1
-                    break
-                else:
-                    print("La boucle est bouclée!!")
-            for i in range(len(neighs)):
-                [neighs[i]].append(self.hexagons_board)
-                print("neighs[i]",neighs[i])
-                if self.intersection([neighs[i]]) == 0:
-                    print("La boucle est bouclée!!")
-                    flag_neigh = 1
-                    break
-            for k in hex_center:
-                # for i in range(len(self.hexagons_board)):
-                neigh = self.neighbour(k)
-                for i in neigh:
-                    if i.color == k.color or i.color == "" and i not in neighs:
-                        neighs.append(i)
-                        print("neighs",[i.row,i.col])                           
-                    else:
-                        flag_neigh = 1
-                        break
-            for neighs in range(6):
-                self.flood_fill(self.hexagons_board,neighs)
+        
+        if len(self.neighbour(hex_center)) < 6:
+            print("hex_center flood",[hex_center.row,hex_center.col])
+        #     # print("play on!")
+            return True
+        if hex_center in self.hexagons_white:
+            print("hex_center in self.hexagons_white play on!")
+            return False
+        if  hex_center in prev_hexes:
+            print("hex_center in prev_hexes play on!")            
+            return False
+ 
+        else:
+            prev_hexes.append(hex_center) 
+            print("hex center",[hex_center.row,hex_center.col])
+            # for i in range(len(prev_hexes)):
+            #     print("prev hexes",[prev_hexes[i].row,prev_hexes[i].col])
+            # if self.flood_fill(hex_center,prev_hexes):
+            #         return True
+            for neigh in self.neighbour(hex_center):
+                # if self.flood_fill(hex_center,prev_hexes):
+            # if neigh not in self.hexagons_white:
+                # for i in range(len(neigh)):
+                #     print("intersection hex",[neigh[i].row,neigh[i].col])
+                print("neigh",[neigh.row,neigh.col])
+                # self.flood_fill(neigh,prev_hexes)
+                if self.flood_fill(neigh,prev_hexes):
+                    # self.flood_fill(neigh,prev_hexes)
+                    return True
+                # self.flood_fill(neigh,prev_hexes)
+        return False
+                
+    def out_of_boundaries (self, hex_center):
+        # self.flood_fill(hex_center,[])
+        if not self.flood_fill(hex_center,[]):
+        # neigh1 = numpy.concatenate(([hex_center[a], self.hexagons_white]), axis=None)
+            print("WIN!!!!!!!!!!!!!!!!")
+            # for i in range(len(neighs)):
+            #     print("neighs border coords",[neighs[i].row,neighs[i].col])    
+            # check = numpy.concatenate(([hex_center[a], self.hexagons_board]), axis=None)
+            # print("check-a:",[check[a].row,check[a].col])
+            # for i in range(len(hex_center)):
+            print("check",[hex_center.row,hex_center.col])
+            return True
 
-
+        else:
+            print("keep on trying")
+            return False
+            # self.flag_neigh = 1
+            # break
+            # if self.intersection(check) == 0:
+            #     print("La boucle est bouclée!!")
+            #     self.flag_neigh = 1
+            #     break
 
     def diag1_line5_white (self, hex_center):
         j = [-1,-2,-3,-4]
@@ -829,15 +722,20 @@ class App(Tk):
                             self.diag2_line5_white(self.hexagons_white)
                             self.diag1_line5_white(self.hexagons_white)
                     if len(self.hexagons_white)>2:
-                        # self.glob_inter = self.hexagons_white
                         for i in range(len(self.hexagons_black)):
-                            self.flood_fill(self.hexagons_black,self.hexagons_black)
+                        # # self.glob_inter = self.hexagons_white
+                        #     print("Jazda! ktory czarny:",[self.hexagons_black[i].row,self.hexagons_black[i].col])
+                            # self.flood_fill(self.hexagons_black[i],[])
+                        # if self.out_of_boundaries (self.hexagons_black[0]):
+                        #     break
+                            if self.out_of_boundaries (self.hexagons_black[i]):
+                                break
                             # if self.loop_on == 1:
                             #     print("found a loop =", self.loop_on)
-                    if self.loop_on == 1:
-                        print("found a loop =", self.loop_on)
-                        for i in self.glob_line:
-                            self.center_loop(i)                 
+                    # if self.loop_on == 1:
+                    #     print("found a loop =", self.loop_on)
+                    #     for i in self.glob_line:
+                    #         self.center_loop(i)                 
                 else:
                     self.draw_black(self.can,hex_closest,self.size)
                     self.hexagons_black.append(hex_closest)
