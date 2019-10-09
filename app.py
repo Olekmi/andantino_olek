@@ -420,68 +420,38 @@ class App(Tk):
         #    mini = self.hexagons_board.index(min(distances))
 
             self.hex_closest1 = self.hexagons_board[distances.index(min(distances))]
-
-       # print(distances)
         print("hex_closest", self.hex_closest1.row, self.hex_closest1.col)
         return self.hexagons_board[distances.index(min(distances))]
 
-    def flood_fill (self, hex_center,prev_hexes):
-        flag_neigh = 0
+    def flood_fill (self, hex_center,prev_hexes, player):
         neigh = []
         
         if len(self.neighbour(hex_center)) < 6:
             print("hex_center flood",[hex_center.row,hex_center.col])
-        #     # print("play on!")
             return True
-        if hex_center in self.hexagons_white:
-            print("hex_center in self.hexagons_white play on!")
+        if hex_center in player:
+            print("hex_center in self.hexagons_ play on!")
             return False
         if  hex_center in prev_hexes:
             print("hex_center in prev_hexes play on!")            
             return False
- 
         else:
             prev_hexes.append(hex_center) 
             print("hex center",[hex_center.row,hex_center.col])
-            # for i in range(len(prev_hexes)):
-            #     print("prev hexes",[prev_hexes[i].row,prev_hexes[i].col])
-            # if self.flood_fill(hex_center,prev_hexes):
-            #         return True
             for neigh in self.neighbour(hex_center):
-                # if self.flood_fill(hex_center,prev_hexes):
-            # if neigh not in self.hexagons_white:
-                # for i in range(len(neigh)):
-                #     print("intersection hex",[neigh[i].row,neigh[i].col])
                 print("neigh",[neigh.row,neigh.col])
-                # self.flood_fill(neigh,prev_hexes)
-                if self.flood_fill(neigh,prev_hexes):
-                    # self.flood_fill(neigh,prev_hexes)
+                if self.flood_fill(neigh,prev_hexes,player):
                     return True
-                # self.flood_fill(neigh,prev_hexes)
         return False
                 
-    def out_of_boundaries (self, hex_center):
-        # self.flood_fill(hex_center,[])
-        if not self.flood_fill(hex_center,[]):
-        # neigh1 = numpy.concatenate(([hex_center[a], self.hexagons_white]), axis=None)
+    def out_of_boundaries (self, hex_center,player):
+        if not self.flood_fill(hex_center,[],player):
             print("WIN!!!!!!!!!!!!!!!!")
-            # for i in range(len(neighs)):
-            #     print("neighs border coords",[neighs[i].row,neighs[i].col])    
-            # check = numpy.concatenate(([hex_center[a], self.hexagons_board]), axis=None)
-            # print("check-a:",[check[a].row,check[a].col])
-            # for i in range(len(hex_center)):
             print("check",[hex_center.row,hex_center.col])
             return True
-
         else:
             print("keep on trying")
             return False
-            # self.flag_neigh = 1
-            # break
-            # if self.intersection(check) == 0:
-            #     print("La boucle est bouclée!!")
-            #     self.flag_neigh = 1
-            #     break
 
     def diag1_line5_white (self, hex_center):
         j = [-1,-2,-3,-4]
@@ -721,21 +691,10 @@ class App(Tk):
                             self.diag3_line5_white(self.hexagons_white)
                             self.diag2_line5_white(self.hexagons_white)
                             self.diag1_line5_white(self.hexagons_white)
-                    if len(self.hexagons_white)>2:
+                    if len(self.hexagons_white)>5:
                         for i in range(len(self.hexagons_black)):
-                        # # self.glob_inter = self.hexagons_white
-                        #     print("Jazda! ktory czarny:",[self.hexagons_black[i].row,self.hexagons_black[i].col])
-                            # self.flood_fill(self.hexagons_black[i],[])
-                        # if self.out_of_boundaries (self.hexagons_black[0]):
-                        #     break
-                            if self.out_of_boundaries (self.hexagons_black[i]):
-                                break
-                            # if self.loop_on == 1:
-                            #     print("found a loop =", self.loop_on)
-                    # if self.loop_on == 1:
-                    #     print("found a loop =", self.loop_on)
-                    #     for i in self.glob_line:
-                    #         self.center_loop(i)                 
+                            if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
+                                break            
                 else:
                     self.draw_black(self.can,hex_closest,self.size)
                     self.hexagons_black.append(hex_closest)
@@ -747,22 +706,17 @@ class App(Tk):
                             self.diag3_line5_black(self.hexagons_black)
                             self.diag2_line5_black(self.hexagons_black)
                             self.diag1_line5_black(self.hexagons_black)
-                    # if len(self.hexagons_black)>2:
-                    #     # self.glob_inter = self.hexagons_white
-                    #     for i in range(len(self.hexagons_white)):
-                    #         self.flood_fill(self.hexagons_white)
-                # self.start = 0
-            # else:
-            #     print("Impossible move")                  
+                    if len(self.hexagons_black)>5:
+                        for i in range(len(self.hexagons_white)):
+                            if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
+                                break               
     
     def intersection (self,seq):
-        # hexes_neigh = []
         seen = set()
         seen_add = seen.add
         # adds all elements it doesn't know yet to seen and all other to seen_twice
         hexes_neigh = set( x for x in seq if x in seen or seen_add(x) )
         # turn the set into a list (as requested)
-
         # print("hexes_neigh",hexes_neigh) 
         return hexes_neigh
 
