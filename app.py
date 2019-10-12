@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter as tk
 import pygame
 from pygame.locals import *
 from math import cos, sin,radians,sqrt
@@ -57,23 +58,87 @@ class App(Tk):
         self.draw_player(self.can,self.hexagons_board,self.size)
         
         # self.draw_white(self.can,self.hexagons_board,self.size)
-        # self.
         # self.can.create_text(50, 50, text='text')
         self.can.bind("<Button-1>", self.click_pos)
-        
+        # self.can.bind("<Button-1>", self.click_pos1)
+        self.click_button()
+        # self.click_button1()
         # self.draw_n_first_hex()
         frame = Frame()
         frame.pack()
     #     frame.focus_set()
     #     frame.bind("<Leave>", self.quit)
-    #   # root.pack()
+        # root.pack()
         # def button_click (self,Button):
         #     self.button1 = Button(frame, text="Player vs Player", command=self.func)
         #     self.button2 = Button(frame, text="Player vs AI", command=self.func)
         #     self.button1.pack(side='left')
         #     self.button2.pack(side='left')
         #     self.can.bind('f', self.func)
-        
+    def callback0(self):
+        self.state = 0
+        print("state0",self.state) 
+    def callback1(self):
+        self.state = 1 
+        print("state1",self.state) 
+
+    # def click_button1(self):
+    #     print("Tkinter is easy to use!")
+
+    #     root = tk.Tk()
+    #     frame = tk.Frame(root)
+    #     frame.pack()
+    #     button = tk.Button(frame, 
+    #                     text="QUIT", 
+    #                     fg="red",
+    #                     command=quit)
+    #     button.pack(side=tk.LEFT)
+    #     slogan = tk.Button(frame,
+    #                     text="first",
+    #                     command=self.callback0)
+    #     slogan.pack(side=tk.LEFT)
+    #     ai = tk.Button(frame,
+    #                     text="sec",
+    #                     command=self.callback1)
+    #     ai.pack(side=tk.LEFT)
+    def click_button(self):
+        print("Tkinter is easy to use!")
+
+        root = tk.Tk()
+        frame = tk.Frame(root)
+        frame.pack()
+        # if pl_vs_pl == True:
+        #     self.pl_vs_pl1 = 1
+        #     pl_vs_pl = False
+        #     print("pl_vs_pl")            
+        #     # return False
+        # if pl_ai:
+        #     self.pl_ai1 = 1
+        #     pl_ai = False
+        #     print("pl_ai")
+            # first = tk.Button(frame,
+            #                 text="Player - 1st",
+            #                 command=self.callback0)
+            # first.pack(side=tk.LEFT)
+            # second = tk.Button(frame,
+            #                 text="Player - 2nd",
+            #                 command=self.callback1)
+            # second.pack(side=tk.LEFT)             
+        # else:
+        button = tk.Button(frame, 
+                        text="QUIT", 
+                        fg="red",
+                        command=quit)
+        button.pack(side=tk.LEFT)
+        slogan = tk.Button(frame,
+                        text="1ST",
+                        command=self.callback0)
+        slogan.pack(side=tk.LEFT)
+        ai = tk.Button(frame,
+                        text="2ND",
+                        command=self.callback1)
+        ai.pack(side=tk.LEFT)
+
         # self.create_hexes_board(self.hexagons)
         # print("number of hexes in board : " + str(len(self.hexagons_board)))
         self.draw_board(self.can,self.hexagons_board,self.size)
@@ -544,15 +609,104 @@ class App(Tk):
                                 for i in range(len(black)):
                                     print("blaczek",[black[i].row,black[i].col])                                  
 
+    # def click_pos (self, event):
+    #     if self.pl_vs_pl == 1:
+    #         score_eval = []
+    #         xy = (event.x, event.y)
+    #         hex_closest = []
+    #         # if self.state == 1 and len(self.hex_glob) ==1:
+    #         hex_closest = self.closest_hex(xy)
+    #         print("closet",hex_closest)
+    #     #     if self.state == 0 and len(self.hex_glob) ==1:
+    #     #         score_eval, hex_closest = self.MinMax(self.create_board(),2,-math.inf,math.inf,self.state == 0)
+    #     #         for i in self.neighbour(hex_closest):
+    #     #             self.neigh_append.append(i)
+    #     #         inter_list = self.intersection(self.neigh_append)
+    #     #         self.first_n = inter_list 
+    #     # #        print("intersection",self.first_n)
+    #     #         if len(self.intersection(self.neigh_append)) <= 2:
+    #     #             # print("ile mam hexow",len(self.intersection(self.neigh_append)))
+    #     #             self.sub_first_hex(self.neigh_append)
+    #     #         self.draw_black(self.can,hex_closest,self.size)
+    #     #         self.hexagons_black.append(hex_closest)   
+    #     #         self.draw_neighb(self.can,self.first_n,self.size)
+    #     #         self.state = 1
+    #     #         print("hexclosest_fromminmax",[hex_closest.row,hex_closest.col])           
+    #         # if self.start == 1:
+    #         print("state",self.state)
+    #         for i in self.first_n:#possible_moves (hexes)
+    #             if hex_closest == i and hex_closest not in self.hex_glob:#if the clicked hex belongs to them
+    #                 self.hex_glob.append(hex_closest)  
+    #                 for i in self.neighbour(hex_closest):
+    #                     self.neigh_append.append(i)
+    #                 inter_list = self.intersection(self.neigh_append)
+    #                 self.first_n = inter_list 
+    #         #        print("intersection",self.first_n)
+    #                 if len(self.intersection(self.neigh_append)) <= 2:
+    #                     # print("ile mam hexow",len(self.intersection(self.neigh_append)))
+    #                     self.sub_first_hex(self.neigh_append)
+                    
+    #                 if self.state == 1:
+    #                     self.draw_white(self.can,hex_closest,self.size)
+    #                     self.hexagons_white.append(hex_closest)
+    #                     # print("white hexes",self.hexagons_white)
+    #                     self.draw_neighb(self.can,self.first_n,self.size)
+    #                     self.state = 0
+    #                     if len(self.hexagons_white)>4:
+    #                         for i in range(len(self.hexagons_white)):
+    #                             self.diag3_line5_white(self.hexagons_white)
+    #                             self.diag2_line5_white(self.hexagons_white)
+    #                             self.diag1_line5_white(self.hexagons_white)
+    #                     if len(self.hexagons_white)>5:
+    #                         for i in range(len(self.hexagons_black)):
+    #                             if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
+    #                                 break            
+    #                 else:
+    #                     score_eval, hex_closest = self.MinMax(self.create_board(),2,-math.inf,math.inf,self.state == 0)
+    #                     print("hexclosest_fromminmax",[hex_closest.row,hex_closest.col])
+    #                     self.draw_black(self.can,hex_closest,self.size)
+    #                     self.hexagons_black.append(hex_closest)
+    #                     # print("black hexes",self.hexagons_black)     
+    #                     self.draw_neighb(self.can,self.first_n,self.size)
+    #                     self.state = 1
+    #                     if len(self.hexagons_black)>4:
+    #                         for i in range(len(self.hexagons_black)):
+    #                             self.diag3_line5_black(self.hexagons_black)
+    #                             self.diag2_line5_black(self.hexagons_black)
+    #                             self.diag1_line5_black(self.hexagons_black)
+    #                     if len(self.hexagons_black)>5:
+    #                         for i in range(len(self.hexagons_white)):
+    #                             if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
+    #                                 break               
+        
+    # def game (self):
     def click_pos (self, event):
-  
-        new1 = []
+        # if self.pl_vs_pl == 1:
+        score_eval = []
         xy = (event.x, event.y)
+        hex_closest = []
+        # if self.state == 1 and len(self.hex_glob) ==1:
         hex_closest = self.closest_hex(xy)
         print("closet",hex_closest)
+    #     if self.state == 0 and len(self.hex_glob) ==1:
+    #         score_eval, hex_closest = self.MinMax(self.create_board(),2,-math.inf,math.inf,self.state == 0)
+    #         for i in self.neighbour(hex_closest):
+    #             self.neigh_append.append(i)
+    #         inter_list = self.intersection(self.neigh_append)
+    #         self.first_n = inter_list 
+    # #        print("intersection",self.first_n)
+    #         if len(self.intersection(self.neigh_append)) <= 2:
+    #             # print("ile mam hexow",len(self.intersection(self.neigh_append)))
+    #             self.sub_first_hex(self.neigh_append)
+    #         self.draw_black(self.can,hex_closest,self.size)
+    #         self.hexagons_black.append(hex_closest)   
+    #         self.draw_neighb(self.can,self.first_n,self.size)
+    #         self.state = 1
+    #         print("hexclosest_fromminmax",[hex_closest.row,hex_closest.col])           
         # if self.start == 1:
-        for i in self.first_n:
-            if hex_closest == i and hex_closest not in self.hex_glob:
+        print("state",self.state)
+        for i in self.first_n:#possible_moves (hexes)
+            if hex_closest == i and hex_closest not in self.hex_glob:#if the clicked hex belongs to them
                 self.hex_glob.append(hex_closest)  
                 for i in self.neighbour(hex_closest):
                     self.neigh_append.append(i)
@@ -579,8 +733,8 @@ class App(Tk):
                             if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
                                 break            
                 else:
-                    hex_closest = self.MinMax(self.create_board(),2,-math.inf,math.inf,self.state == 0)
-                    print("hexclosest_fromminmax",hex_closest)
+                    score_eval, hex_closest = self.MinMax(self.create_board(),2,-math.inf,math.inf,self.state == 0)
+                    print("hexclosest_fromminmax",[hex_closest.row,hex_closest.col])
                     self.draw_black(self.can,hex_closest,self.size)
                     self.hexagons_black.append(hex_closest)
                     # print("black hexes",self.hexagons_black)     
@@ -594,8 +748,8 @@ class App(Tk):
                     if len(self.hexagons_black)>5:
                         for i in range(len(self.hexagons_white)):
                             if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
-                                break               
-    
+                                break    
+
     def intersection (self,seq):
         seen = set()
         seen_add = seen.add
@@ -609,17 +763,19 @@ class App(Tk):
         print("depth",depth)
         if depth == 0 or self.game_over == 1:
             return position.score
+        target = []    
         if max_player:
             score = -math.inf
             for i in range(len(position.possible_moves)):# .child(position,possible_moves): #i put the board as position and children are the possible moves
                 new_child = position.child(position,position.possible_moves[i],self.hexagons_board)
-                value = self.MinMax(new_child,depth-1, alpha,beta,False)
-                print("value-min",value)
+                value, child = self.MinMax(new_child,depth-1, alpha,beta,False)
+                # print("value-min",value)
                 if value > score:
-                   score = value
-                alpha = max(alpha, value)
-                if beta <= alpha:
-                    break
+                    score = value
+                    target = position.possible_moves[i]
+                    alpha = max(alpha, score)
+                    if beta <= alpha:
+                        break
             # return score
         else:
             score = math.inf
@@ -627,19 +783,20 @@ class App(Tk):
                 new_child = position.child(position,position.possible_moves[i],self.hexagons_board)
                 print("newchild",new_child)
                 value = self.MinMax(new_child,depth-1, alpha,beta,True)
-                print("value-max",value)
+                # print("value-max",value)
                 if value < score:
                     score = value
-                beta = min(beta,value)
-                if beta <= alpha:
-                    break
+                    target = position.possible_moves[i]
+                    beta = min(beta,score)
+                    if beta <= alpha:
+                        break
             # return score
-        print("score",score)
-        print("value",value)
-        print("newchild",new_child)
-        print("positionscore",position.score)
-        print("scoretyp",type(score))
-        return [score, new_child]
+        # print("score",score)
+        # print("value",value)
+        # print("newchild",new_child)
+        # print("positionscore",position.score)
+        # print("scoretyp",type(score))
+        return score, target
 
     def evaluate (self,hex_center):
         hex_center = random.randint(1,101)
