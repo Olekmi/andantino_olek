@@ -679,7 +679,33 @@ class App(Tk):
     #                             if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
     #                                 break               
         
-    # def game (self):
+    def possible_move (self):
+        all_neighs = []
+
+        for i in self.player_hexes:
+            all_neighs.append(self.neighbour(i))
+        possible_move = self.intersection(all_neighs)
+        for i in range(len(possible_move)):
+            print("possible_moves1s",possible_move[i]) 
+        return possible_move
+
+    def game (self, event):
+#human player
+        if self.callback0:
+            print("let's start0")
+
+        if self.callback1:
+            print("let's start1")
+    def click_posnew (self, event):
+        # if self.pl_vs_pl == 1:
+        score_eval = []
+        xy = (event.x, event.y)
+        hex_closest = []
+        # if self.state == 1 and len(self.hex_glob) ==1:
+        hex_closest = self.closest_hex(xy)
+        print("closetnew",hex_closest)
+        return hex_closest
+
     def click_pos (self, event):
         # if self.pl_vs_pl == 1:
         score_eval = []
@@ -750,14 +776,21 @@ class App(Tk):
                             if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
                                 break    
 
+    # def intersection (self,seq):
+    #     seen = set()
+    #     seen_add = seen.add
+    #     # adds all elements it doesn't know yet to seen and all other to seen_twice
+    #     hexes_neigh = set( x for x in seq if x in seen or seen_add(x) )
+    #     # turn the set into a list (as requested)
+    #     # print("hexes_neigh",hexes_neigh) 
+    #     return hexes_neigh
+
     def intersection (self,seq):
-        seen = set()
-        seen_add = seen.add
-        # adds all elements it doesn't know yet to seen and all other to seen_twice
-        hexes_neigh = set( x for x in seq if x in seen or seen_add(x) )
-        # turn the set into a list (as requested)
-        # print("hexes_neigh",hexes_neigh) 
-        return hexes_neigh
+        # d = Counter(seq)
+        res=[seq[i] for i in range(len(seq)) if seq[i] in seq[:i]][1:]
+        # res = [k for k, v in d.items() if v > 1]
+        # hexes_neigh = list(hexes_neigh)
+        return res
 
     def MinMax (self,position,depth, alpha,beta,max_player): 
         print("depth",depth)
