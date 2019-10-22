@@ -3,7 +3,7 @@ import tkinter as tk
 import app
 import player
 
-class Game:
+class Game():
 
     """
     class representing a game state
@@ -12,7 +12,8 @@ class Game:
         """
         create a new game
         """
-        self.board = app.App().create_hexes_board
+        Tk.__init__(self)
+        self.board = app.App().create_hexes_board(app.App().initGrid(20,20,18))
         self.firsthand=player.Human(player.FIRST_HAND)
         self.lasthand=player.Bot(player.LAST_HAND)
         self.can = Tk.Canvas(self, width=650, height=550, bg="#60ace6")
@@ -30,7 +31,7 @@ class Game:
         """
         app.App().draw_white(self.can,self.board,self.size)
         is_first_hand_turn = True
-        while 1>0: #in future should be added state of end game
+        while True: #in future should be added state of end game
             if (is_first_hand_turn):
                 self.firsthand.play(self.board)
             else :

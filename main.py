@@ -3,7 +3,7 @@ import game
 
 app =App()
 app.mainloop()
-g = game.Game()
-g.initialize()
-g.ply()
+# g = game.Game()
+# g.initialize()
+# g.ply()
 # root.mainloop()

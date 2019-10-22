@@ -14,12 +14,13 @@ class Bot(object):
         self.can = Tk.Canvas(self, width=650, height=550, bg="#60ace6")
         self.size = 18
         self.depth = 2
+        
     def play(self,board,depth,alpha,beta):
         for i in range(len(board.possible_moves)):# .child(position,possible_moves): #i put the board as position and children are the possible moves
                 new_child = board.child(board,board.possible_moves[i],board)
-        app.App().MinMax(new_child,depth-1, alpha,beta,False)
+        score_eval, hex_closest = app.App().MinMax(new_child,depth-1, alpha,beta,False)
         
-        app.App().draw_black(self.can,board,self.size)
+        app.App().draw_black(self.can,hex_closest,self.size)
 
 class Human(object):
     def __init__ (self,label):
