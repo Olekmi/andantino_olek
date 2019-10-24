@@ -15,22 +15,17 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
         # try:
         score = -math.inf
         for i in range(len(position.possible_moves)):# .child(position,possible_moves): #i put the board as position and children are the possible moves
-            print(type(position.possible_moves[i]))
-            print(len(position.possible_moves))
-            # print("call from minimax max part")
-            # for j in position.player_hexes:
-            #     print(type(j))
-            # print("done")
-            # print("type of possible move individual",type(position.possible_moves[i]))
             new_child = position.child(position,position.possible_moves[i],hexagons_board)
             # max_player = False
             value, child = MinMax(new_child,depth-1, alpha,beta,False,hexagons_board)
             # print("value-min",value)
             if value > score:
                 score = value
-                target = position.possible_moves[i]
+#                if depth == 2:
+#                    target = position.possible_moves[i]
                 # if depth == 2:
                 #     target = position.possible_moves[i]
+                target = position.possible_moves[i]
                 alpha = max(alpha, score)
                 if beta <= alpha:
                     break
@@ -42,7 +37,7 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
 
         score = math.inf
         for i in range(len(position.possible_moves)):
-            print(type(position.possible_moves[i]))
+#            print(type(position.possible_moves[i]))
             # print("call from minimax min part")
             # for j in position.player_hexes:
             #     print(type(j))
@@ -54,8 +49,10 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
             # print("value-max",value)
             if value < score:
                 score = value
-                print("possible moves i",i)
-                print(len(position.possible_moves))
+#                print("possible moves i",i)
+#                print(len(position.possible_moves))
+#                if depth == 2:
+#                    target = position.possible_moves[i]
                 target = position.possible_moves[i]
                 # if depth == 2:
                 #     target = position.possible_moves[i]
