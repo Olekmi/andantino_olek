@@ -8,7 +8,7 @@ import board
 def MinMax (position,depth, alpha,beta,max_player,hexagons_board): 
     # print("depth",depth)
     if depth == 0:# or self.game_over == 1:
-        return position.score
+        return score, target
     target = []    
     print("depth", depth)
     if max_player:
