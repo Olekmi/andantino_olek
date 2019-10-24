@@ -10,17 +10,20 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
     if depth == 0:# or self.game_over == 1:
         return position.score
     target = []    
+    print("depth", depth)
     if max_player:
+        # try:
         score = -math.inf
         for i in range(len(position.possible_moves)):# .child(position,possible_moves): #i put the board as position and children are the possible moves
             print(type(position.possible_moves[i]))
+            print(len(position.possible_moves))
             # print("call from minimax max part")
             # for j in position.player_hexes:
             #     print(type(j))
             # print("done")
             # print("type of possible move individual",type(position.possible_moves[i]))
             new_child = position.child(position,position.possible_moves[i],hexagons_board)
-            max_player = False
+            # max_player = False
             value, child = MinMax(new_child,depth-1, alpha,beta,False,hexagons_board)
             # print("value-min",value)
             if value > score:
@@ -32,7 +35,11 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                 if beta <= alpha:
                     break
         return score, target
+        # except Exception as e:
+        #     print("error in max:",e)
     else:
+        # try:
+
         score = math.inf
         for i in range(len(position.possible_moves)):
             print(type(position.possible_moves[i]))
@@ -40,7 +47,7 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
             # for j in position.player_hexes:
             #     print(type(j))
             # print("done")
-            max_player = True
+            # max_player = True
             new_child = position.child(position,position.possible_moves[i],hexagons_board)
             # print("newchild",new_child)
             value, child = MinMax(new_child,depth-1, alpha,beta,True,hexagons_board)
@@ -54,6 +61,8 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                 if beta <= alpha:
                     break
         return score, target
+        # except Exception as e:
+        #     print("error in min:",e)
     # print("score",score)
     # print("value",value)
     # print("newchild",new_child)

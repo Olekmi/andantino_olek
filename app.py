@@ -52,6 +52,7 @@ class App(Tk):
     def init_board_object(self):
         # temp = []
         first_player_hex = self.hex_glob
+        print("first player", first_player_hex)
         depth = 0
         player1_hexes = first_player_hex
         player2_hexes = []
@@ -225,8 +226,9 @@ class App(Tk):
                         if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
                             break            
             else:
-                
+                eval, hex_closest = ai.MinMax(self.game_board,self.depth_game,-math.inf,math.inf,True,self.hexagons_board)
                 print("ai move :, row = "+str(hex_closest.row)+", col = " + str(hex_closest.col))
+                
 
                 # self.hex_glob.append(hex_closest)  
                 # self.list_of_neigh = draw.neighbour(hex_closest,self.hexagons_board)
@@ -244,7 +246,7 @@ class App(Tk):
 
                 print("from AI turn",self.game_board.possible_moves)
 
-                eval, hex_closest = ai.MinMax(self.game_board,self.depth_game,-math.inf,math.inf,True,self.hexagons_board)
+
                 # for i in range(len(self.first_n)):
                 #     print("intersection",self.first_n[i].row,self.first_n[i].col)
                 if len(self.intersection(self.neigh_append)) <= 2:
