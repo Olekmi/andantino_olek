@@ -162,6 +162,7 @@ class Board():
         child_player_hexes = child_p1_list+child_p2_list
         print("child_player_hexes", child_player_hexes)
         child_possible_moves = self.possible_move(child_player_hexes,hexagons_board)
+        print("child_possible_moves", child_possible_moves)
         # print("child test type of posssible moves")
         # for i in child_possible_moves:
         #     print("type of i",type(i))
