@@ -33,6 +33,21 @@ def draw_board(canvas,hexagons_board,size):
         coords = []
         draw_corners(config.fill_empty,config.outline_gray,canvas,start_x,start_y)
 
+def draw_player(canvas,hexagons_board,size):      #layer of white hexes
+    start_x = 0
+    start_y = 0  
+    hex_append = []
+    
+    for i in range(len(hexagons_board)):
+        if hexagons_board[i].row == 9 and hexagons_board[i].col == 10:
+            start_x = hexagons_board[i].x #tried shift
+            start_y = hexagons_board[i].y
+            hex_append.append([start_x, start_y])
+            first_neighs = neighbour(hexagons_board[i],hexagons_board)
+            draw_neighb(canvas,first_neighs,size) 
+            draw_n_first_hex (first_neighs,canvas)
+    draw_corners(config.fill_white,config.outline_gray,canvas,start_x,start_y)
+
 def sub_first_hex (hex,canvas):#subtractes the first drawn neighbours
     draw_board(canvas,hex,config.size) 
     return hex
@@ -62,20 +77,7 @@ def draw_white(canvas,hexagon,size):      #layer of white hexes
     coords = []
     draw_corners(config.fill_white,config.outline_gray,canvas,start_x,start_y)
 
-def draw_player(canvas,hexagons_board,size):      #layer of white hexes
-    start_x = 0
-    start_y = 0  
-    hex_append = []
-    
-    for i in range(len(hexagons_board)):
-        if hexagons_board[i].row == 9 and hexagons_board[i].col == 10:
-            start_x = hexagons_board[i].x #tried shift
-            start_y = hexagons_board[i].y
-            hex_append.append([start_x, start_y])
-            first_neighs = neighbour(hexagons_board[i],hexagons_board)
-            draw_neighb(canvas,first_neighs,size) 
-            draw_n_first_hex (first_neighs,canvas)
-    draw_corners(config.fill_white,config.outline_gray,canvas,start_x,start_y)
+
 
 def neighbour (hex_center,hexagons_board):
 

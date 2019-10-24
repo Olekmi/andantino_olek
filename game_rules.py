@@ -68,19 +68,19 @@ def flood_fill (hex_center,prev_hexes, player, hexagons_board):
     neigh = []
     
     if len(draw.neighbour(hex_center,hexagons_board)) < 6:
-        print("hex_center flood",[hex_center.row,hex_center.col])
+        # print("hex_center flood",[hex_center.row,hex_center.col])
         return True
     if hex_center in player:
-        print("hex_center in self.hexagons_ play on!")
+        # print("hex_center in self.hexagons_ play on!")
         return False
     if  hex_center in prev_hexes:
-        print("hex_center in prev_hexes play on!")            
+        # print("hex_center in prev_hexes play on!")            
         return False
     else:
         prev_hexes.append(hex_center) 
-        print("hex center",[hex_center.row,hex_center.col])
+        # print("hex center",[hex_center.row,hex_center.col])
         for neigh in draw.neighbour(hex_center,hexagons_board):
-            print("neigh",[neigh.row,neigh.col])
+            # print("neigh",[neigh.row,neigh.col])
             if flood_fill(neigh,prev_hexes,player,hexagons_board):
                 return True
     return False

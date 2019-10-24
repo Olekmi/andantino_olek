@@ -3,6 +3,7 @@ cols = 20
 size = 18
 width = 650
 height = 550
+depth = 3
 outline_gray = "gray"
 outline_black = "black"
 fill_empty = ""
