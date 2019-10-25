@@ -28,14 +28,14 @@ def intersection4(seq):
 
 a = np.array([1, 2, 1, 3, 3, 3, 0])
 test = [1,2,1,4,5,7,7,7,8]
-print(intersection(test))
+# print(intersection(test))
 out = intersection3(test)
-print(out)
+# print(out)
 print(intersection4(test))
 
-ar1 = [1,2,3,4]
-ar2 = [1,1,1,1]
-print(ar1+ar2)
+# ar1 = [1,2,3,4]
+# ar2 = [1,1,1,1]
+# print(ar1+ar2)
 
-for i in range(len(test)):
-    print(a)
+# for i in range(len(test)):
+#     print(a)

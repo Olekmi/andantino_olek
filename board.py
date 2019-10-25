@@ -16,7 +16,7 @@ class Board():
         self.score = score
         self.possible_moves = possible_moves
         self.player_type = player_type
-        if(len(player2_hexes) == 0):
+        if(len(player2_hexes) == 0) and (len(player1_hexes) == 0):
             self.player_hexes = player1_hexes
         else:
             self.player_hexes = player1_hexes + player2_hexes
@@ -115,7 +115,8 @@ class Board():
 #            return possible_move_list
             # return possible_move_list
         # print("LENGTH OF PLAYER HEXES LIST",len(self.player_hexes))
-        for i in self.player_hexes:
+        # for i in self.player_hexes:
+        for i in board:
             all_neighs.append(self.neighbour(i,hexagons_board))
             # print("all neighs",all_neighs)
         all_neighs = [item for sublist in all_neighs for item in sublist]
@@ -124,19 +125,19 @@ class Board():
 
         final_list = []
         for i in possible_move_list:
-            if i not in self.player_hexes:
+            if i not in board:
                 final_list.append(i)
                 # print("ffinal list",[i.row,i.col])
 #        print("final list",final_list)
 #        print("from possible move, depth = "+str(self.depth) + "possible moves length : "+str(len(possible_move_list)))
-        return possible_move_list
+        return final_list
     
     def child (self,board,move,hexagons_board):
         # child_player_hexes = board.player_hexes
         # print("type of move",type(move))
         # child_player_hexes.append(move)
-        child_p1_list = board.player1_hexes
-        child_p2_list = board.player2_hexes
+        child_p1_list = [] + board.player1_hexes
+        child_p2_list = [] + board.player2_hexes
         if(board.player_type == 0):
             child_player_type = 1# white
         else:
@@ -152,7 +153,7 @@ class Board():
 #                print("child list p2",[i.row,i.col])
 
 
-        child_depth = board.depth + 1
+        child_depth = board.depth 
         child_hexagon = move
         # if board.player:
         #     child_player = False
@@ -160,7 +161,7 @@ class Board():
         #     child_player = True
         child_score = random.randint(1,101)
         child_player_hexes = child_p1_list+child_p2_list
-#        print("child_player_hexes", child_player_hexes)
+        print("child_player_hexes", child_player_hexes)
         child_possible_moves = self.possible_move(child_player_hexes,hexagons_board)
 #        print("child_possible_moves", child_possible_moves)
         # print("child test type of posssible moves")
