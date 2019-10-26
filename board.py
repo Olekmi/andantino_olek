@@ -31,9 +31,6 @@ class Board():
         return a
 
     def neighbour (self, hex_center, hexagons_board):
-        # print("print type of hexcenter",type(hex_center))
-        # if type(hex_center) == type([]):
-        #     print(len(hex_center))
         hex_neighbs = []
         if hex_center.row % 2 == 0:
             for j in range (len(hexagons_board)):
@@ -72,16 +69,13 @@ class Board():
                     hex_neighbs.append(hexagons_board[j])
             for j in range (len(hexagons_board)):
                 if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
-                    hex_neighbs.append(hexagons_board[j])            
-        # print("Olek Hex_neighs from neghbours fnc", hex_neighbs)       
+                    hex_neighbs.append(hexagons_board[j])              
         return hex_neighbs
-    # def new_moves (self,hex):
+
     def add_first_hexx (self,hexagons_board):
         for i in range(len(hexagons_board)):
             if hexagons_board[i].row == 9 and hexagons_board[i].col == 10:
-                # first_neighs = draw.neighbour(self.hexagons_board[i],self.hexagons_board)
                 self.player1_hexes = hexagons_board[i]
-                # print("player 1 hexes",self.player1_hexes)
         return self.player1_hexes    
 
     def possible_move (self,board,hexagons_board):
@@ -89,31 +83,15 @@ class Board():
         possible_move_list = []
         for i in board:
             all_neighs.append(self.neighbour(i,hexagons_board))
-            # print("all neighs",all_neighs)
         all_neighs = [item for sublist in all_neighs for item in sublist]
         possible_move_list = self.intersection(all_neighs)
-        # print("possible_move_list",possible_move_list)
-
         final_list = []
         for i in possible_move_list:
             if i not in board:
                 final_list.append(i)
-                # print("ffinal list",[i.row,i.col])
-#        print("final list",final_list)
-#        print("from possible move, depth = "+str(self.depth) + "possible moves length : "+str(len(possible_move_list)))
         return final_list
 
-
-    def del_element (self,board):
-        if (len(board.player1_hexes) == 2) and (len(board.player2_hexes) == 0):
-            del board.player1_hexes[1]
-            print("ddsd")
-        # return board
-
     def child (self,board,move,hexagons_board):
-        # child_player_hexes = board.player_hexes
-        # print("type of move",type(move))
-        # child_player_hexes.append(move)
         child_score = 0
         child_p1_list = [] + board.player1_hexes
         child_p2_list = [] + board.player2_hexes
@@ -124,41 +102,49 @@ class Board():
 
         if child_player_type == 0:
             child_p1_list.append(move)
-            if len(child_p2_list) > 0:
+            if len(child_p1_list) > 0:
                 child_score = self.evaluation_function(child_p1_list,child_p1_list)
-#            for i in child_p1_list:
-#                print("child list p1",[i.row,i.col])
         else:
             child_p2_list.append(move)
             if len(child_p2_list) > 0:
                 child_score = self.evaluation_function(child_p2_list,child_p2_list)
-#            for i in child_p2_list:
-#                print("child list p2",[i.row,i.col])
         child_depth = board.depth 
         child_hexagon = move
-        # if board.player:
-        #     child_player = False
-        # else:
-        #     child_player = True
-        # child_score = random.randint(1,101)
         child_player_hexes = child_p1_list+child_p2_list
-        # print("child_player_hexes", child_player_hexes)
         child_possible_moves = self.possible_move(child_player_hexes,hexagons_board)
         final_child = Board(child_hexagon,child_depth,child_p1_list,child_p2_list,child_score,child_possible_moves,child_player_type)
-        # print("child_ai",final_child) 
         return final_child
 # def __init__(self, hexagon, depth, player1_hexes,player2_hexes,score,possible_moves,player_hexes,player_type):
 
-    def evaluation_function (self,player,player_hexes):
-        print(type(game_rules.diag3_line5(player,player_hexes)))
+    def evaluation_function (self,player,player_hexes,second_player,hexagons_board):
+        child_score = 0
 
         if game_rules.diag3_line5(player,player_hexes)==4:
-            child_score = 100
+            child_score += 100
+        if game_rules.diag2_line5(player,player_hexes)==4:
+            child_score += 100  
+        if game_rules.diag1_line5(player,player_hexes)==4:
+            child_score += 100                      
         if game_rules.diag3_line5(player,player_hexes)>0:
-            child_score += 10*len(game_rules.diag3_line5(player,player_hexes))
+            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+        if game_rules.diag2_line5(player,player_hexes)>0:
+            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+        if game_rules.diag1_line5(player,player_hexes)>0:
+            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+        if not game_rules.flood_fill(second_player,[],player,hexagons_board):  
+            child_score += 100                      
         else:
             child_score = 0
         return child_score
+
+    def out_of_boundaries (self,hex_center,player,hexagons_board):
+        if not game_rules.flood_fill(hex_center,[],player,hexagons_board):
+            print("WIN!!!!!!!!!!!!!!!!")
+            print("check",[hex_center.row,hex_center.col])
+            return True
+        else:
+            # print("keep on trying")
+            return False    
 
 
 
