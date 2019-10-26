@@ -6,10 +6,10 @@ import config
 import board
 
 def MinMax (position,depth, alpha,beta,max_player,hexagons_board): 
-    print("depth",depth)
+    # print("depth",depth)
     if depth == 0:# or self.game_over == 1:
-        print("position.score",position.score)
-        print("position.hexagon",[position.hexagon.row, position.hexagon.col])        
+        # print("position.score",position.score)
+        # print("position.hexagon",[position.hexagon.row, position.hexagon.col])        
         return position.score, position.hexagon
     target = []    
     
@@ -27,8 +27,8 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                     target = possible_move
                     # print("target",target)
                     break
-        print("target",[target.row,target.col])
-        print("score max",score)       
+        # print("target",[target.row,target.col])
+        # print("score max",score)       
         return score, target
     else:
         score = math.inf
@@ -42,6 +42,6 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                 beta = min(beta,score)
                 if (beta <= alpha):# and (config.depth == depth):
                     break
-        print("target",[target.row,target.col])
-        print("score min",score)
+        # print("target",[target.row,target.col])
+        # print("score min",score)
         return score, target

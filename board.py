@@ -96,18 +96,18 @@ class Board():
         child_p1_list = [] + board.player1_hexes
         child_p2_list = [] + board.player2_hexes
         if(board.player_type == 0):
-            child_player_type = 1# white
+            child_player_type = 1# black
         else:
-            child_player_type = 0 #black
+            child_player_type = 0 #white
 
         if child_player_type == 0:
             child_p1_list.append(move)
             if len(child_p1_list) > 0:
-                child_score = self.evaluation_function(child_p1_list,child_p1_list)
+                child_score = self.evaluation_function(child_p1_list,child_p1_list,child_p2_list,hexagons_board)
         else:
             child_p2_list.append(move)
             if len(child_p2_list) > 0:
-                child_score = self.evaluation_function(child_p2_list,child_p2_list)
+                child_score = self.evaluation_function(child_p2_list,child_p2_list,child_p1_list,hexagons_board)
         child_depth = board.depth 
         child_hexagon = move
         child_player_hexes = child_p1_list+child_p2_list
@@ -131,56 +131,23 @@ class Board():
             child_score += 10*game_rules.diag3_line5(player,player_hexes)
         if game_rules.diag1_line5(player,player_hexes)>0:
             child_score += 10*game_rules.diag3_line5(player,player_hexes)
-        if not game_rules.flood_fill(second_player,[],player,hexagons_board):  
-            child_score += 100                      
-        else:
-            child_score = 0
-        return child_score
+        if self.out_of_boundaries(player,second_player,hexagons_board):  
+            child_score += 150                      
+        return child_score 
 
-    def out_of_boundaries (self,hex_center,player,hexagons_board):
+    def out_of_boundaries (self,player1,player2,hexagons_board):
+        if self.player_type == 1:
+            if len(player1)>5:
+                for i in range(len(player2)):
+                    if self.encircle_check(player2[i],player1,hexagons_board):
+                        return True
+        else:
+            if len(player2)>5:
+                for i in range(len(player1)):
+                    if self.encircle_check(player1[i],player2,hexagons_board):
+                        return True
+
+    def encircle_check (self,hex_center,player,hexagons_board):
         if not game_rules.flood_fill(hex_center,[],player,hexagons_board):
-            print("WIN!!!!!!!!!!!!!!!!")
-            print("check",[hex_center.row,hex_center.col])
+            print("encircle win!")
             return True
-        else:
-            # print("keep on trying")
-            return False    
-
-
-
-def move(self, hex,pawns):
-    if hex in self.get_possible_moves(pawns):
-        if(self.player_type == 0):
-            child_player_type = 1# white
-        else:
-            child_player_type = 0 #black
-
-        if child_player_type == 0:
-            self.player1_hexes.append(hex)
-#            for i in child_p1_list:
-#                print("child list p1",[i.row,i.col])
-        else:
-            self.player2_hexes.append(hex)
-
-
-def get_children(self,board,hexagons_board):
-    children = []
-    for possible_move in self.get_possible_moves(board,hexagons_board):
-        child = copy.deepcopy(self)
-        child.move(possible_move)
-        children.append(child)
-    return children
-
-def get_possible_moves(self,board,hexagons_board):
-    possible_moves = []
-    all_neighs = []
-    for i in board:
-        all_neighs.append(self.neighbour(i,hexagons_board))
-    all_neighs = [item for sublist in all_neighs for item in sublist]
-    possible_move_list = self.intersection(all_neighs)
-    possible_moves = []
-    for i in possible_move_list:
-        if i not in board:
-            possible_moves.append(i)
-    return possible_moves
-

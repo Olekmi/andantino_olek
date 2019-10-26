@@ -34,23 +34,18 @@ class App(Tk):
         self.hex_glob = []
         self.first_hex = []
         self.initGrid(config.rows, config.cols, self.size)
-        # ai.board.Board.player_type = 1
-        # print("number of hexes in total : " + str(len(self.hexagons)))
         self.create_hexes_board()
         draw.draw_player(self.can,self.hexagons_board,self.size)
-        # print(len(self.hexagons_board))
-        # ai.board.Board.add_first_hexx(self,self.hexagons_board)
         self.can.bind("<Button-1>", self.click_pos)
         frame = Frame()
         frame.pack()
-#        self.click_button()
+        self.click_button()
         draw.draw_board(self.can,self.hexagons_board,self.size)
         draw.draw_neighb(self.can,self.add_first_hex(),self.size)
         self.init_board_object()
         print(len(self.game_board.possible_moves))
 
     def init_board_object(self):
-        # temp = []
         first_player_hex = self.first_hex
         print("first player", first_player_hex)
         depth = 0
@@ -61,13 +56,9 @@ class App(Tk):
             player2_hexes = []
         score = 0
         possible_moves = self.first_n
-        player_type = 0
+        player_type = self.state
         init_board_object = board.Board(first_player_hex,depth,player1_hexes,player2_hexes,score,possible_moves,player_type)
         self.game_board = init_board_object
-
-
-
-
 
     def callback0(self):
         self.state = 0
@@ -82,30 +73,41 @@ class App(Tk):
         root = tk.Tk()
         frame = tk.Frame(root)
         frame.pack()
-#        button = tk.Button(frame, 
-#                        text="QUIT", 
-#                        fg="red",
-#                        command=quit)
-#        button.pack(side=tk.LEFT)
+        button = tk.Button(frame, 
+                       text="QUIT", 
+                       fg="red",
+                       command=quit)
+        button.pack(side=tk.LEFT)
         slogan = tk.Button(frame,
-                        text="1ST",
+                        text="Start 1ST",
                         command=self.callback0)
         slogan.pack(side=tk.LEFT)
         ai = tk.Button(frame,
-                        text="2ND",
+                        text="Start 2ND",
                         command=self.callback1)
         ai.pack(side=tk.LEFT)    
       
     def add_first_hex (self):
+        start_order = int(input("Enter '1' if you want to start 1st, '2' if second "))
+        if start_order == 1:
+            self.state = 0
+            print("You are starting")
+        else:
+            self.state = 1
+            print("You will be second")
         for i in range(len(self.hexagons_board)):
             if self.hexagons_board[i].row == 9 and self.hexagons_board[i].col == 10:
                 first_neighs = draw.neighbour(self.hexagons_board[i],self.hexagons_board)
                 self.hex_glob = [self.hexagons_board[i]]
-                self.hexagons_white = [self.hexagons_board[i]]
+                # self.hexagons_white = [self.hexagons_board[i]]
                 self.first_hex = [self.hexagons_board[i]]               
                 self.neigh_append = first_neighs #adds first neighbours before second hex
                 self.first_n = first_neighs
                 draw.draw_n_first_hex(self.neigh_append,self.can)
+                if self.state == 0:
+                    self.hexagons_white = [self.hexagons_board[i]]
+                else:
+                    self.hexagons_black = [self.hexagons_board[i]]
         return first_neighs
                 
     def initGrid(self, cols, rows, size): # prints background layer of hexes, with offset shifting layers and is of shape of rectangle
@@ -158,13 +160,9 @@ class App(Tk):
     def closest_hex (self, click_pos):
         distances = []
         for i in self.hexagons_board:
-            # distance = (sqrt((i.x - click_pos[0])**2), sqrt((i.y - click_pos[1])**2))
             distance = sqrt((i.x+self.size - click_pos[0])**2 + (i.y+self.size*0.5 - click_pos[1])**2)
             distances.append(distance)
-        #    mini = self.hexagons_board.index(min(distances))
-
             self.hex_closest1 = self.hexagons_board[distances.index(min(distances))]
-        # print("hex_closest", self.hex_closest1.row, self.hex_closest1.col)
         return self.hexagons_board[distances.index(min(distances))]
 
     def out_of_boundaries (self,hex_center,player):
@@ -176,21 +174,11 @@ class App(Tk):
             # print("keep on trying")
             return False
 
-    # def create_board(self,hex_closest):
-    #     score = random.randint(1,101)
-    #     possible_moves = list(self.first_n)
-        
-    #     boardgame = board.Board(hex_closest,self.depth_game,self.hexagons_white,self.hexagons_black,score,possible_moves,self.state)
-    #     return boardgame        
-
     def click_pos (self, event):
-        
-        
         xy = (event.x, event.y)
         hex_closest = self.closest_hex(xy)
 
         if (hex_closest in self.first_n) and (hex_closest not in self.hex_glob): 
-            print("length of possible moves",len(self.first_n))
             self.depth_game += 1                      
             if self.state == 1:
                 self.hex_glob.append(hex_closest)  
@@ -199,25 +187,16 @@ class App(Tk):
                 inter_list = self.intersection(self.neigh_append)
                 self.first_n = list(inter_list )
                 neighbours_temp = []
-
                 for i in range(len(self.first_n)):
                     if self.first_n[i] not in self.hex_glob:
                         neighbours_temp.append(self.first_n[i])
                 self.first_n = neighbours_temp
-                # ai.board.Board.player_type.append(hex_closest)
-#create a fnc move
-
-
-
                 draw.draw_white(self.can,hex_closest,self.size)
                 self.hexagons_white.append(hex_closest)
                 draw.draw_neighb(self.can,self.first_n,self.size)
                 self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)                
                 self.state = 0
-                ai.board.Board.player_type = 1
-
-                #update game state
-                print(self.game_board.possible_moves)                
+                ai.board.Board.player_type = 1             
                 if len(self.hexagons_white)>4:
                     for i in range(len(self.hexagons_white)):
                         game_rules.diag3_line5(self.hexagons_white,self.hexagons_white)
@@ -231,13 +210,8 @@ class App(Tk):
                 ai.board.Board.player_type = 1
                 eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
                 print("eval",eval)
-#                print("ai move :, row = "+str(hex_closest.row)+", col = " + str(hex_closest.col))
                 self.hex_glob.append(hex_closest)
-                print("gamedepth",self.depth_game)
-                # if (len(self.game_board.player1_hexes) == 2) and (len(self.game_board.player2_hexes) == 0):
-                #     self.game_board.del_element(self.game_board)
-                #     self.hex_glob.append(hex_closest)
-                  
+                print("gamedepth",self.depth_game)                 
                 for i in draw.neighbour(hex_closest,self.hexagons_board): #possible moves
                     self.neigh_append.append(i)
                 inter_list = self.intersection(self.neigh_append)
@@ -257,8 +231,6 @@ class App(Tk):
                 self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)
                 self.state = 1
                 ai.board.Board.player_type = 0
-
-                print("from AI turn",self.game_board.possible_moves)
                 if len(self.hexagons_black)>4:
                     for i in range(len(self.hexagons_black)):
                         game_rules.diag3_line5(self.hexagons_black,self.hexagons_black)
