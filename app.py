@@ -44,11 +44,9 @@ class App(Tk):
         draw.draw_board(self.can,self.hexagons_board,self.size)
         draw.draw_neighb(self.can,self.add_first_hex(),self.size)
         self.init_board_object()
-        print(len(self.game_board.possible_moves))
 
     def init_board_object(self):
         first_player_hex = self.first_hex
-        print("first player", first_player_hex)
         depth = 0
         player1_hexes = []
         player2_hexes = []
