@@ -37,12 +37,6 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
 
         score = math.inf
         for possible_move in position.possible_moves:
-#            print(type(possible_move))
-            # print("call from minimax min part")
-            # for j in position.player_hexes:
-            #     print(type(j))
-            # print("done")
-            # max_player = True
             new_child = position.child(position, possible_move,hexagons_board)
             # print("newchild",new_child)
             value, child = MinMax(new_child,depth-1, alpha,beta,True,hexagons_board)
