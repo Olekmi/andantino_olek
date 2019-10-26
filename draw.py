@@ -46,7 +46,7 @@ def draw_player(canvas,hexagons_board,size):      #layer of white hexes
             first_neighs = neighbour(hexagons_board[i],hexagons_board)
             draw_neighb(canvas,first_neighs,size) 
             draw_n_first_hex (first_neighs,canvas)
-    draw_corners(config.fill_white,config.outline_gray,canvas,start_x,start_y)
+    draw_corners(config.fill_black,config.outline_gray,canvas,start_x,start_y)
 
 def sub_first_hex (hex,canvas):#subtractes the first drawn neighbours
     draw_board(canvas,hex,config.size) 

@@ -1,5 +1,4 @@
 from app import *
-import game
 
 app =App()
 app.mainloop()
