@@ -23,6 +23,7 @@ class App(Tk):
         self.depth_game = config.depth
         self.size = config.size
         self.state = 0
+        self.game_type = 0
         self.can.pack(padx=0)
         self.hexagons = []
         self.hexagons_board = []
@@ -61,10 +62,10 @@ class App(Tk):
         self.game_board = init_board_object
 
     def callback0(self):
-        self.state = 0
+        self.game_type = 0
         print("state0",self.state) 
     def callback1(self):
-        self.state = 1 
+        self.game_type = 1 
         print("state1",self.state) 
 
     def click_button(self):
@@ -79,11 +80,11 @@ class App(Tk):
                        command=quit)
         button.pack(side=tk.LEFT)
         slogan = tk.Button(frame,
-                        text="Start 1ST",
+                        text="Player vs AI",
                         command=self.callback0)
         slogan.pack(side=tk.LEFT)
         ai = tk.Button(frame,
-                        text="Start 2ND",
+                        text="Player vs Player",
                         command=self.callback1)
         ai.pack(side=tk.LEFT)    
       
@@ -191,6 +192,8 @@ class App(Tk):
                     if self.first_n[i] not in self.hex_glob:
                         neighbours_temp.append(self.first_n[i])
                 self.first_n = neighbours_temp
+                if len(self.intersection(self.neigh_append)) <= 2:
+                    draw.sub_first_hex(self.neigh_append,self.can)
                 draw.draw_white(self.can,hex_closest,self.size)
                 self.hexagons_white.append(hex_closest)
                 draw.draw_neighb(self.can,self.first_n,self.size)
@@ -207,10 +210,15 @@ class App(Tk):
                         if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
                             break            
             else:
-                ai.board.Board.player_type = 1
-                eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
-                print("eval",eval)
-                self.hex_glob.append(hex_closest)
+                if self.game_type == 0:
+                    ai.board.Board.player_type = 1
+                    eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
+                    print("eval",eval)
+                    self.hex_glob.append(hex_closest)
+                    self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)
+
+                else:  
+                    self.hex_glob.append(hex_closest)
                 print("gamedepth",self.depth_game)                 
                 for i in draw.neighbour(hex_closest,self.hexagons_board): #possible moves
                     self.neigh_append.append(i)
@@ -223,12 +231,10 @@ class App(Tk):
                         neighbours_temp.append(self.first_n[i])
                 self.first_n = neighbours_temp
                 if len(self.intersection(self.neigh_append)) <= 2:
-                    # print("ile mam hexow",len(self.intersection(self.neigh_append)))
                     draw.sub_first_hex(self.neigh_append,self.can)
                 draw.draw_black(self.can,hex_closest,self.size)
                 self.hexagons_black.append(hex_closest)  
                 draw.draw_neighb(self.can,self.first_n,self.size)
-                self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)
                 self.state = 1
                 ai.board.Board.player_type = 0
                 if len(self.hexagons_black)>4:
