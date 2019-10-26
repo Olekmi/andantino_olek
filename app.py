@@ -51,11 +51,14 @@ class App(Tk):
 
     def init_board_object(self):
         # temp = []
-        first_player_hex = self.hex_glob
+        first_player_hex = self.first_hex
         print("first player", first_player_hex)
         depth = 0
-        player1_hexes = first_player_hex
+        player1_hexes = []
         player2_hexes = []
+        if(len(player2_hexes) == 0) and (len(player1_hexes) == 0):
+            player1_hexes = first_player_hex
+            player2_hexes = []
         score = 0
         possible_moves = self.first_n
         player_type = 0
@@ -181,12 +184,14 @@ class App(Tk):
     #     return boardgame        
 
     def click_pos (self, event):
-        self.depth_game += 1
-        print("length of possible moves",len(self.first_n))
+        
+        
         xy = (event.x, event.y)
         hex_closest = self.closest_hex(xy)
 
-        if (hex_closest in self.first_n) and (hex_closest not in self.hex_glob):                       
+        if (hex_closest in self.first_n) and (hex_closest not in self.hex_glob): 
+            print("length of possible moves",len(self.first_n))
+            self.depth_game += 1                      
             if self.state == 1:
                 self.hex_glob.append(hex_closest)  
                 for i in draw.neighbour(hex_closest,self.hexagons_board):
@@ -223,15 +228,16 @@ class App(Tk):
                         if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
                             break            
             else:
-                # ai.board.Board.player_type = 1
+                ai.board.Board.player_type = 1
                 eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
+                print("eval",eval)
 #                print("ai move :, row = "+str(hex_closest.row)+", col = " + str(hex_closest.col))
                 self.hex_glob.append(hex_closest)
-                
-                
-                # self.hex_glob.append(hex_closest)  
-                # self.list_of_neigh = draw.neighbour(hex_closest,self.hexagons_board)
-    #         print("list_of_neigh",self.list_of_neigh)
+                print("gamedepth",self.depth_game)
+                # if (len(self.game_board.player1_hexes) == 2) and (len(self.game_board.player2_hexes) == 0):
+                #     self.game_board.del_element(self.game_board)
+                #     self.hex_glob.append(hex_closest)
+                  
                 for i in draw.neighbour(hex_closest,self.hexagons_board): #possible moves
                     self.neigh_append.append(i)
                 inter_list = self.intersection(self.neigh_append)
@@ -242,11 +248,6 @@ class App(Tk):
                     if self.first_n[i] not in self.hex_glob:
                         neighbours_temp.append(self.first_n[i])
                 self.first_n = neighbours_temp
-
-
-
-                # for i in range(len(self.first_n)):
-                #     print("intersection",self.first_n[i].row,self.first_n[i].col)
                 if len(self.intersection(self.neigh_append)) <= 2:
                     # print("ile mam hexow",len(self.intersection(self.neigh_append)))
                     draw.sub_first_hex(self.neigh_append,self.can)

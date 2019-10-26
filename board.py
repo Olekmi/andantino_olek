@@ -4,6 +4,7 @@ import random
 import math
 from collections import Counter
 import numpy as np
+import game_rules
 
 class Board():
     def __init__(self, hexagon, depth, player1_hexes,player2_hexes,score,possible_moves,player_type):
@@ -101,11 +102,19 @@ class Board():
 #        print("final list",final_list)
 #        print("from possible move, depth = "+str(self.depth) + "possible moves length : "+str(len(possible_move_list)))
         return final_list
-    
+
+
+    def del_element (self,board):
+        if (len(board.player1_hexes) == 2) and (len(board.player2_hexes) == 0):
+            del board.player1_hexes[1]
+            print("ddsd")
+        # return board
+
     def child (self,board,move,hexagons_board):
         # child_player_hexes = board.player_hexes
         # print("type of move",type(move))
         # child_player_hexes.append(move)
+        child_score = 0
         child_p1_list = [] + board.player1_hexes
         child_p2_list = [] + board.player2_hexes
         if(board.player_type == 0):
@@ -115,10 +124,14 @@ class Board():
 
         if child_player_type == 0:
             child_p1_list.append(move)
+            if len(child_p2_list) > 0:
+                child_score = self.evaluation_function(child_p1_list,child_p1_list)
 #            for i in child_p1_list:
 #                print("child list p1",[i.row,i.col])
         else:
             child_p2_list.append(move)
+            if len(child_p2_list) > 0:
+                child_score = self.evaluation_function(child_p2_list,child_p2_list)
 #            for i in child_p2_list:
 #                print("child list p2",[i.row,i.col])
         child_depth = board.depth 
@@ -127,14 +140,27 @@ class Board():
         #     child_player = False
         # else:
         #     child_player = True
-        child_score = random.randint(1,101)
+        # child_score = random.randint(1,101)
         child_player_hexes = child_p1_list+child_p2_list
-        print("child_player_hexes", child_player_hexes)
+        # print("child_player_hexes", child_player_hexes)
         child_possible_moves = self.possible_move(child_player_hexes,hexagons_board)
         final_child = Board(child_hexagon,child_depth,child_p1_list,child_p2_list,child_score,child_possible_moves,child_player_type)
         # print("child_ai",final_child) 
         return final_child
 # def __init__(self, hexagon, depth, player1_hexes,player2_hexes,score,possible_moves,player_hexes,player_type):
+
+    def evaluation_function (self,player,player_hexes):
+        print(type(game_rules.diag3_line5(player,player_hexes)))
+
+        if game_rules.diag3_line5(player,player_hexes)==4:
+            child_score = 100
+        if game_rules.diag3_line5(player,player_hexes)>0:
+            child_score += 10*len(game_rules.diag3_line5(player,player_hexes))
+        else:
+            child_score = 0
+        return child_score
+
+
 
 def move(self, hex,pawns):
     if hex in self.get_possible_moves(pawns):

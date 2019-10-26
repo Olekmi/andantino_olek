@@ -42,7 +42,8 @@ def diag3_line5 (hex_center, colour):
     h = [1,1,2,2]
     j = [0,1,1,2]
     z = [-1,-2,-3,-4]
-    
+    if len(colour)==1:
+        return 0
     for hex_center in colour:
         hexes = []
         if hex_center.row % 2 == 0:
@@ -50,19 +51,29 @@ def diag3_line5 (hex_center, colour):
                 for k in range(len(colour)):
                     if colour[k].col == hex_center.col + h[i] and colour[k].row == hex_center.row +z[i] and colour[k] not in hexes:
                         hexes.append(colour[k])
+                        if len(hexes) > 0:
+                            return len(hexes)
+                        else: 
+                            return 0 
                         if len(hexes) > 3:
                             print("You won! -dir_3")  
                             for p in range(len(hexes)):
-                                print("the winning line",[hexes[p].row,hexes[p].col]) 
+                                print("the winning line",[hexes[p].row,hexes[p].col])
+                                break 
         else:   
             for o in range(4):
                 for t in range(len(colour)):
                     if colour[t].col == hex_center.col + j[o] and colour[t].row == hex_center.row + z[o] and colour[t] not in hexes:
                         hexes.append(colour[t])
+                        if len(hexes) > 0:
+                            return len(hexes)
+                        else: 
+                            return 0                        
                         if len(hexes) > 3:
                             print("You won! - dir_3") 
                             for i in range(len(hexes)):
-                                print("the winning line",[hexes[i].row,hexes[i].col])     
+                                print("the winning line",[hexes[i].row,hexes[i].col])
+                                break     
 #encicrling the opponent winning condition
 def flood_fill (hex_center,prev_hexes, player, hexagons_board):
     neigh = []
