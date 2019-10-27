@@ -201,7 +201,7 @@ class App(Tk):
             else:
                 if self.game_type == 0:
                     ai.board.Board.player_type = 1
-                    eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
+                    eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)#to use NegaMax just overwrite Minmax
                     # print("eval",eval)
                     self.hex_glob.append(hex_closest)
                     self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)

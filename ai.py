@@ -47,3 +47,19 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                 if (beta <= alpha):# and (config.depth == depth):
                     break
         return score, target
+
+def NegaMax (position,depth, alpha,beta,max_player,hexagons_board): 
+    if depth == 0:# or self.game_over == 1:    
+        return position.score, position.hexagon      
+    best_move = [] 
+    best_score = -math.inf
+    for possible_move in position.possible_moves:
+        new_child = position.child(position, possible_move, hexagons_board)#new board
+        value, current_move = MinMax(new_child,depth-1, alpha,beta,False,hexagons_board)
+        current_score = -value
+        if current_score > best_score:
+            best_score = current_score
+            best_move = possible_move
+            if (beta <= best_score):# and (config.depth == depth):
+                return best_score, best_move  
+    return best_score, best_move
