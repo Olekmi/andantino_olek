@@ -102,11 +102,11 @@ class Board():
         if child_player_type == 0:
             child_p1_list.append(move)
             if len(child_p1_list) > 0:
-                child_score = self.evaluation_function(child_p1_list,child_p1_list,child_p2_list,hexagons_board)
+                child_score = self.evaluation_function(child_p1_list,child_p2_list,child_p2_list,child_p1_list,hexagons_board)
         else:
             child_p2_list.append(move)
             if len(child_p2_list) > 0:
-                child_score = self.evaluation_function(child_p2_list,child_p2_list,child_p1_list,hexagons_board)
+                child_score = self.evaluation_function(child_p1_list,child_p2_list,child_p1_list,child_p2_list,hexagons_board)
         child_depth = board.depth 
         child_hexagon = move
         child_player_hexes = child_p1_list+child_p2_list
@@ -115,21 +115,21 @@ class Board():
         return final_child
 # def __init__(self, hexagon, depth, player1_hexes,player2_hexes,score,possible_moves,player_hexes,player_type):
 
-    def evaluation_function (self,player,player_hexes,second_player,hexagons_board):
+    def evaluation_function (self,player,player_hexes,second_player,first_player,hexagons_board):
         child_score = 0
-        if game_rules.diag3_line5(player,player_hexes)==4:
+        if game_rules.diag3_line5(first_player,first_player)==4:
             child_score += config.coeff_win_line
-        if game_rules.diag2_line5(player,player_hexes)==4:
+        if game_rules.diag2_line5(first_player,first_player)==4:
             child_score += config.coeff_win_line  
-        if game_rules.diag1_line5(player,player_hexes)==4:
+        if game_rules.diag1_line5(first_player,first_player)==4:
             child_score += config.coeff_win_line                      
         if game_rules.diag3_line5(player,player_hexes)>0:
-            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
+            child_score += config.coeff_len_line*game_rules.diag3_line5(first_player,first_player)# - config.coeff_len_line*game_rules.diag3_line5(player_hexes,player_hexes)
         if game_rules.diag2_line5(player,player_hexes)>0:
-            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
+            child_score += config.coeff_len_line*game_rules.diag2_line5(first_player,first_player)
         if game_rules.diag1_line5(player,player_hexes)>0:
-            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
-        if self.out_of_boundaries(player,second_player,hexagons_board):  
+            child_score += config.coeff_len_line*game_rules.diag1_line5(first_player,first_player)
+        if self.out_of_boundaries(first_player,second_player,hexagons_board):  
             child_score += config.coeff_win_circle                      
         return child_score 
 
