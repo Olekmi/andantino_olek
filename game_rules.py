@@ -26,10 +26,8 @@ def diag1_line5 (hex_center, colour):
                     if len(hexes) == 0:
                         x0 = len(hexes)                    
                     if len(hexes) > 3:
-                        print("You won! - dir_1")
+                        # print("You won! - dir_1")
                         break  
-                        # for p in range(len(hexes)):
-                        #     print("the winning line",[hexes[p].row,hexes[p].col]) 
         max_line = max(x0,x1,x2,x3,x4)     
     return max_line                            
 
@@ -62,10 +60,8 @@ def diag2_line5 (hex_center, colour):
                         if len(hexes) == 0:
                             x0 = len(hexes)                        
                         if len(hexes) > 3:
-                            print("You won! - dir_2")
+                            # print("You won! - dir_2")
                             break  
-                            # for p in range(len(hexes)):
-                                # print("the winning line",[hexes[p].row,hexes[p].col]) 
         else:
             for o in range(4):
                 for t in range(len(colour)):
@@ -82,10 +78,8 @@ def diag2_line5 (hex_center, colour):
                         if len(hexes) == 0:
                             x0 = len(hexes)                                            
                         if len(hexes) > 3:
-                            print("You won! - dir2") 
+                            # print("You won! - dir2") 
                             break
-                            # for i in range(len(hexes)):
-                                # print("the winning line",[hexes[i].row,hexes[i].col]) 
         max_line = max(x0,x1,x2,x3,x4)     
     return max_line                                                              
 
@@ -118,9 +112,7 @@ def diag3_line5 (hex_center, colour):
                         if len(hexes) == 0:
                             x0 = len(hexes)
                         if len(hexes) > 3:
-                            print("You won! -dir_3")  
-                            # for p in range(len(hexes)):
-                                # print("the winning line",[hexes[p].row,hexes[p].col])
+                            # print("You won! -dir_3")  
                             break 
         else:   
             for o in range(4):
@@ -138,9 +130,7 @@ def diag3_line5 (hex_center, colour):
                         if len(hexes) == 4:
                             x4 = len(hexes)                      
                         if len(hexes) > 3:
-                            print("You won! - dir_3") 
-                            # for i in range(len(hexes)):
-                                # print("the winning line",[hexes[i].row,hexes[i].col])
+                            # print("You won! - dir_3") 
                             break
         max_line = max(x0,x1,x2,x3,x4)     
     return max_line                        
@@ -160,5 +150,3 @@ def flood_fill (hex_center,prev_hexes, player, hexagons_board):
             if flood_fill(neigh,prev_hexes,player,hexagons_board):
                 return True
     return False
-                
-

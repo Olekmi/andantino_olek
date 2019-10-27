@@ -28,7 +28,7 @@ def draw_corners (fill,outline,canvas,start_x,start_y):
 def draw_board(canvas,hexagons_board,size):    
     for i in range(len(hexagons_board)):
         
-        start_x = hexagons_board[i].x #tried shift
+        start_x = hexagons_board[i].x
         start_y = hexagons_board[i].y 
         coords = []
         draw_corners(config.fill_empty,config.outline_gray,canvas,start_x,start_y)
@@ -38,14 +38,14 @@ def draw_player(canvas,hexagons_board,size):      #layer of white hexes
     start_y = 0
     state = 0  
     hex_append = []
-    start_order = int(input("I will ask you twice, make sure to answer the same: Enter '1' if you want to start 1st(white), '2' if second(black) "))
+    start_order = int(input("I will ask you twice, make sure to answer the same: Enter '1' if you want to start 1st, '2' if second: "))
     if start_order == 1:
         state = 0
     else:
         state = 1
     for i in range(len(hexagons_board)):
         if hexagons_board[i].row == 9 and hexagons_board[i].col == 10:
-            start_x = hexagons_board[i].x #tried shift
+            start_x = hexagons_board[i].x 
             start_y = hexagons_board[i].y
             hex_append.append([start_x, start_y])
             first_neighs = neighbour(hexagons_board[i],hexagons_board)
@@ -74,7 +74,7 @@ def draw_black(canvas,hexagon,size):      #layer of black hexes
 def draw_neighb (canvas,neighbours, size):
     neighbours = list(neighbours)
     for i in range(len(neighbours)):
-        start_x = neighbours[i].x #tried shift
+        start_x = neighbours[i].x 
         start_y = neighbours[i].y 
         coords = []
         draw_corners(config.fill_empty,config.outline_black,canvas,start_x,start_y)

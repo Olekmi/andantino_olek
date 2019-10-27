@@ -39,9 +39,3 @@ x3=30
 x4=40
 max_line = max(x1,x2,x3,x4)  
 print(max_line)
-# ar1 = [1,2,3,4]
-# ar2 = [1,1,1,1]
-# print(ar1+ar2)
-
-# for i in range(len(test)):
-#     print(a)

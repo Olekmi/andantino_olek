@@ -1,7 +1,7 @@
 from tkinter import *
 import tkinter as tk
-import pygame
-from pygame.locals import *
+# import pygame
+# from pygame.locals import *
 from math import cos, sin,radians,sqrt,inf
 import math
 import random
@@ -13,7 +13,8 @@ import draw, config, game_rules, ai
 from ai import *
 import board
 # import sys
-# sys.stdout = open('stdout.txt', 'w')
+# sys.stdout = open('stdout.txt', 'w') #to save in an external file
+print("How to play? Hexes with black borders indicate possible moves. To activate AI's turn you also must click on one of them and then he will choose his move.")
 
 class App(Tk):
     def __init__(self):
@@ -61,14 +62,12 @@ class App(Tk):
 
     def callback0(self):
         self.game_type = 0
-        print("state0",self.state) 
+        print("You play against AI") 
     def callback1(self):
         self.game_type = 1 
-        print("state1",self.state) 
+        print("Mode: Player vs Player") 
 
     def click_button(self):
-        print("Tkinter is easy to use!")
-
         root = tk.Tk()
         frame = tk.Frame(root)
         frame.pack()
@@ -87,7 +86,7 @@ class App(Tk):
         ai.pack(side=tk.LEFT)    
       
     def add_first_hex (self):
-        start_order = int(input("Enter '1' if you want to start 1st, '2' if second "))
+        start_order = int(input("Enter '1' if you want to start 1st, '2' if second: "))
         if start_order == 1:
             self.state = 0
             print("You are starting")
@@ -112,10 +111,6 @@ class App(Tk):
     def initGrid(self, cols, rows, size): # prints background layer of hexes, with offset shifting layers and is of shape of rectangle
         start_x_first_hex = +0
         start_y_first_hex = +20
-        """
-        2d grid of hexagons
-        """
-        # to get inclusive range chang
         for c in range(cols):
             for r in range(rows): 
                 if r % 2 == 0:
@@ -128,9 +123,8 @@ class App(Tk):
                             size,
                             "#a1e2a1")
                 self.hexagons.append(h)
-                # self.can.create_text(50, 50, text='text')
                 # h.draw_coordinate(h.x,h.y,str(r),chr(c+97))
-                h.draw_coordinate(h.x,h.y,str(r),str(c))
+                # h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
                 # h.convert_coordinate(h.x,h.y,str(r),(c))
 
     def create_hexes_board(self): #continuation of grid. Takes the printed hexes and aligned them in a desired manner
@@ -143,7 +137,6 @@ class App(Tk):
                 for j in range(len(self.hexagons)):   #search for the right hex with specific row and col  
                     if (self.hexagons[j].row == row and self.hexagons[j].col ==  col):
                         self.hexagons_board.append(self.hexagons[j])
-                        # print("type of hexboard",type(self.hexagons_board))
                 col += 1
             col -= (end_row )
             if h < 9:
@@ -166,11 +159,8 @@ class App(Tk):
 
     def out_of_boundaries (self,hex_center,player):
         if not game_rules.flood_fill(hex_center,[],player,self.hexagons_board):
-            print("WIN!!!!!!!!!!!!!!!!")
-            print("check",[hex_center.row,hex_center.col])
             return True
         else:
-            # print("keep on trying")
             return False
 
     def click_pos (self, event):
@@ -200,24 +190,25 @@ class App(Tk):
                 ai.board.Board.player_type = 1             
                 if len(self.hexagons_white)>4:
                     for i in range(len(self.hexagons_white)):
-                        game_rules.diag3_line5(self.hexagons_white,self.hexagons_white)
-                        game_rules.diag2_line5(self.hexagons_white,self.hexagons_white)
-                        game_rules.diag1_line5(self.hexagons_white,self.hexagons_white)
+                        if game_rules.diag1_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag2_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag3_line5(self.hexagons_white,self.hexagons_white) == 4:
+                            print("white - You won by line of 5!")
+                            break                        
                 if len(self.hexagons_white)>5:
                     for i in range(len(self.hexagons_black)):
                         if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
+                            print("white - You won by loop!")
                             break            
             else:
                 if self.game_type == 0:
                     ai.board.Board.player_type = 1
                     eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)
-                    print("eval",eval)
+                    # print("eval",eval)
                     self.hex_glob.append(hex_closest)
                     self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)
 
                 else:  
                     self.hex_glob.append(hex_closest)
-                print("gamedepth",self.depth_game)                 
+                # print("gamedepth",self.depth_game)                 
                 for i in draw.neighbour(hex_closest,self.hexagons_board): #possible moves
                     self.neigh_append.append(i)
                 inter_list = self.intersection(self.neigh_append)
@@ -237,12 +228,13 @@ class App(Tk):
                 ai.board.Board.player_type = 0
                 if len(self.hexagons_black)>4:
                     for i in range(len(self.hexagons_black)):
-                        game_rules.diag3_line5(self.hexagons_black,self.hexagons_black)
-                        game_rules.diag2_line5(self.hexagons_black,self.hexagons_black)
-                        game_rules.diag1_line5(self.hexagons_black,self.hexagons_black)
+                        if game_rules.diag1_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag2_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag3_line5(self.hexagons_black,self.hexagons_black) == 4:
+                            print("black - You won by line of 5!")
+                            break
                 if len(self.hexagons_black)>5:
                     for i in range(len(self.hexagons_white)):
                         if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
+                            print("black - You won by loop!")
                             break               
     
     def intersection (self,seq):
@@ -250,7 +242,3 @@ class App(Tk):
         seen_add = seen.add
         hexes_neigh = set( x for x in seq if x in seen or seen_add(x) )
         return hexes_neigh  
-
-    
-# root = Tk()
-# root.update()

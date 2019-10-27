@@ -4,7 +4,7 @@ import random
 import math
 from collections import Counter
 import numpy as np
-import game_rules
+import game_rules, config
 
 class Board():
     def __init__(self, hexagon, depth, player1_hexes,player2_hexes,score,possible_moves,player_type):
@@ -12,7 +12,6 @@ class Board():
         self.depth = depth
         self.player1_hexes = player1_hexes
         self.player2_hexes = player2_hexes
-        # self.player_hexes = player_hexes
         # self.game_over = 0
         self.score = score
         self.possible_moves = possible_moves
@@ -118,21 +117,20 @@ class Board():
 
     def evaluation_function (self,player,player_hexes,second_player,hexagons_board):
         child_score = 0
-
         if game_rules.diag3_line5(player,player_hexes)==4:
-            child_score += 100
+            child_score += config.coeff_win_line
         if game_rules.diag2_line5(player,player_hexes)==4:
-            child_score += 100  
+            child_score += config.coeff_win_line  
         if game_rules.diag1_line5(player,player_hexes)==4:
-            child_score += 100                      
+            child_score += config.coeff_win_line                      
         if game_rules.diag3_line5(player,player_hexes)>0:
-            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
         if game_rules.diag2_line5(player,player_hexes)>0:
-            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
         if game_rules.diag1_line5(player,player_hexes)>0:
-            child_score += 10*game_rules.diag3_line5(player,player_hexes)
+            child_score += config.coeff_len_line*game_rules.diag3_line5(player,player_hexes)
         if self.out_of_boundaries(player,second_player,hexagons_board):  
-            child_score += 150                      
+            child_score += config.coeff_win_circle                      
         return child_score 
 
     def out_of_boundaries (self,player1,player2,hexagons_board):
