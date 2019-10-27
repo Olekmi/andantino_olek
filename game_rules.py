@@ -7,6 +7,7 @@ def diag1_line5 (hex_center, colour):
     x2 = 0
     x3 = 0
     x4 = 0
+    max_line = 0
     if len(colour)==1:
         return 0 
     for hex_center in colour:
@@ -40,6 +41,7 @@ def diag2_line5 (hex_center, colour):
     x2 = 0
     x3 = 0
     x4 = 0
+    max_line = 0
     if len(colour)==1:
         return 0
     for hex_center in colour:
@@ -92,6 +94,7 @@ def diag3_line5 (hex_center, colour):
     x2 = 0
     x3 = 0
     x4 = 0
+    max_line = 0
     if len(colour)==1:
         return 0
     for hex_center in colour:

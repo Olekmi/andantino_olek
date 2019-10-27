@@ -118,11 +118,17 @@ class Board():
     def evaluation_function (self,player,player_hexes,second_player,first_player,hexagons_board):
         child_score = 0
         if game_rules.diag3_line5(first_player,first_player)==4:
-            child_score += config.coeff_win_line
+            child_score += config.coeff_win_line 
         if game_rules.diag2_line5(first_player,first_player)==4:
             child_score += config.coeff_win_line  
         if game_rules.diag1_line5(first_player,first_player)==4:
-            child_score += config.coeff_win_line                      
+            child_score += config.coeff_win_line
+        if game_rules.diag3_line5(second_player,second_player)==4:
+            child_score -= config.coeff_win_line 
+        if game_rules.diag2_line5(second_player,second_player)==4:
+            child_score -= config.coeff_win_line  
+        if game_rules.diag1_line5(second_player,second_player)==4:
+            child_score -= config.coeff_win_line                       
         if game_rules.diag3_line5(player,player_hexes)>0:
             child_score += config.coeff_len_line*game_rules.diag3_line5(first_player,first_player)# - config.coeff_len_line*game_rules.diag3_line5(player_hexes,player_hexes)
         if game_rules.diag2_line5(player,player_hexes)>0:
