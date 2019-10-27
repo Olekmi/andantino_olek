@@ -14,7 +14,7 @@ from ai import *
 import board
 # import sys
 # sys.stdout = open('stdout.txt', 'w') #to save in an external file
-print("How to play? Hexes with black borders indicate possible moves. To activate AI's turn you also must click on one of them and then he will choose his move.")
+print("How to play? Empty hexes with black borders indicate possible moves. To activate AI's turn you also must click on one of them and then he will choose his move.")
 
 class App(Tk):
     def __init__(self):

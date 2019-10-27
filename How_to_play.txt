@@ -1,0 +1,9 @@
+How to play? 
+Open main.py and compile the project. 
+Next, follow the questions in the console and choose your mode of play (as a default it is player versus AI).
+Empty hexes with black borders indicate possible moves. 
+To activate AI's turn you also must click on one of them and then he will choose his move.
+The second window allows to choose mode of the game. Either player vs player or a game versus AI.
+
+#Config file allows to change some parameters of the game. Like a depth search or size of the window.
+
