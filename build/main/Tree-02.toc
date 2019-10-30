@@ -1,0 +1,43 @@
+('C:\\Program '
+ 'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg',
+ None,
+ {'*.pyw', '*.cp38-win_amd64.pyd', '*.py', '*.pyd', 'EGG-INFO', '*.pyc'},
+ 'DATA',
+ [('setuptools\\cli-32.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\cli-32.exe',
+   'DATA'),
+  ('setuptools\\cli-64.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\cli-64.exe',
+   'DATA'),
+  ('setuptools\\cli.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\cli.exe',
+   'DATA'),
+  ('setuptools\\gui-32.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\gui-32.exe',
+   'DATA'),
+  ('setuptools\\gui-64.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\gui-64.exe',
+   'DATA'),
+  ('setuptools\\gui.exe',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\gui.exe',
+   'DATA'),
+  ('setuptools\\script (dev).tmpl',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\script '
+   '(dev).tmpl',
+   'DATA'),
+  ('setuptools\\script.tmpl',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\script.tmpl',
+   'DATA'),
+  ('setuptools\\command\\launcher manifest.xml',
+   'C:\\Program '
+   'Files\\V-REP3\\V-REP_PRO_EDU\\andantino_olek\\build\\main\\setuptools-39.1.0-py3.8.egg\\setuptools\\command\\launcher '
+   'manifest.xml',
+   'DATA')])

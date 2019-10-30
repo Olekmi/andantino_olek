@@ -92,40 +92,32 @@ def neighbour (hex_center,hexagons_board):
     hex_neighbs = []
     if hex_center.row % 2 == 0:
         for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col -1 and hexagons_board[j].row == hex_center.row:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
-                hex_neighbs.append(hexagons_board[j])            
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row - 1:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row + 1:
-                hex_neighbs.append(hexagons_board[j]) 
+            if hexagons_board[j].col >= hex_center.col -1 and hexagons_board[j].row >= hex_center.row -1:
+                if hexagons_board[j].col == hex_center.col -1 and hexagons_board[j].row == hex_center.row:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
+                    hex_neighbs.append(hexagons_board[j])            
+                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row - 1:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row + 1:
+                    hex_neighbs.append(hexagons_board[j]) 
     else:
         for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row - 1:
-                hex_neighbs.append(hexagons_board[j])            
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row + 1:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
-                hex_neighbs.append(hexagons_board[j])
-        for j in range (len(hexagons_board)):
-            if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
-                hex_neighbs.append(hexagons_board[j])               
+            if hexagons_board[j].col >= hex_center.col -1 and hexagons_board[j].row >= hex_center.row -1:
+                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row - 1:
+                    hex_neighbs.append(hexagons_board[j])            
+                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row + 1:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
+                    hex_neighbs.append(hexagons_board[j])
+                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
+                    hex_neighbs.append(hexagons_board[j])               
     return hex_neighbs  

@@ -33,42 +33,34 @@ class Board():
         hex_neighbs = []
         if hex_center.row % 2 == 0:
             for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col -1 and hexagons_board[j].row == hex_center.row:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
-                    hex_neighbs.append(hexagons_board[j])            
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row - 1:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row + 1:
-                    hex_neighbs.append(hexagons_board[j]) 
+                if hexagons_board[j].col >= hex_center.col -1 and hexagons_board[j].row >= hex_center.row -1:
+                    if hexagons_board[j].col == hex_center.col -1 and hexagons_board[j].row == hex_center.row:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
+                        hex_neighbs.append(hexagons_board[j])            
+                    if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row - 1:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row + 1:
+                        hex_neighbs.append(hexagons_board[j]) 
         else:
             for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row - 1:
-                    hex_neighbs.append(hexagons_board[j])            
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row + 1:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
-                    hex_neighbs.append(hexagons_board[j])
-            for j in range (len(hexagons_board)):
-                if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
-                    hex_neighbs.append(hexagons_board[j])              
+                if hexagons_board[j].col >= hex_center.col -1 and hexagons_board[j].row >= hex_center.row -1:
+                    if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row - 1:
+                        hex_neighbs.append(hexagons_board[j])            
+                    if hexagons_board[j].col == hex_center.col - 1 and hexagons_board[j].row == hex_center.row + 1:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row - 1:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col and hexagons_board[j].row == hex_center.row + 1:
+                        hex_neighbs.append(hexagons_board[j])
+                    if hexagons_board[j].col == hex_center.col + 1 and hexagons_board[j].row == hex_center.row:
+                        hex_neighbs.append(hexagons_board[j])              
         return hex_neighbs
 
     def add_first_hexx (self,hexagons_board):
@@ -117,28 +109,30 @@ class Board():
 
     def evaluation_function (self,player,player_hexes,second_player,first_player,hexagons_board):
         child_score = 0
-        if game_rules.diag3_line5(first_player,first_player)==4:
-            child_score += config.coeff_win_line 
-        if game_rules.diag2_line5(first_player,first_player)==4:
-            child_score += config.coeff_win_line  
-        if game_rules.diag1_line5(first_player,first_player)==4:
-            child_score += config.coeff_win_line
-        if game_rules.diag3_line5(second_player,second_player)==4:
-            child_score -= config.coeff_win_line 
-        if game_rules.diag2_line5(second_player,second_player)==4:
-            child_score -= config.coeff_win_line  
-        if game_rules.diag1_line5(second_player,second_player)==4:
-            child_score -= config.coeff_win_line                       
-        if game_rules.diag3_line5(first_player,first_player)>0:
+                       
+        if game_rules.diag3_line5(first_player,first_player)>1:
             child_score += config.coeff_len_line*game_rules.diag3_line5(first_player,first_player)# - config.coeff_len_line*game_rules.diag3_line5(player_hexes,player_hexes)
-        if game_rules.diag2_line5(first_player,first_player)>0:
+        if game_rules.diag2_line5(first_player,first_player)>1:
             child_score += config.coeff_len_line*game_rules.diag2_line5(first_player,first_player)
-        if game_rules.diag1_line5(first_player,first_player)>0:
+        if game_rules.diag1_line5(first_player,first_player)>1:
             child_score += config.coeff_len_line*game_rules.diag1_line5(first_player,first_player)
-        if self.out_of_boundaries(first_player,second_player,hexagons_board):  
-            child_score += config.coeff_win_circle
-        if self.out_of_boundaries(second_player,first_player,hexagons_board):  
-            child_score -= config.coeff_win_circle                      
+        if len(first_player)>4:
+            if game_rules.diag3_line5(first_player,first_player)==4:
+                child_score += config.coeff_win_line 
+            if game_rules.diag2_line5(first_player,first_player)==4:
+                child_score += config.coeff_win_line  
+            if game_rules.diag1_line5(first_player,first_player)==4:
+                child_score += config.coeff_win_line
+            if game_rules.diag3_line5(second_player,second_player)==4:
+                child_score -= config.coeff_win_line 
+            if game_rules.diag2_line5(second_player,second_player)==4:
+                child_score -= config.coeff_win_line  
+            if game_rules.diag1_line5(second_player,second_player)==4:
+                child_score -= config.coeff_win_line            
+            if self.out_of_boundaries(first_player,second_player,hexagons_board):  
+                child_score += config.coeff_win_circle
+            if self.out_of_boundaries(second_player,first_player,hexagons_board):  
+                child_score -= config.coeff_win_circle                      
         return child_score 
 
     def out_of_boundaries (self,player1,player2,hexagons_board):

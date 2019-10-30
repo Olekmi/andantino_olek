@@ -124,7 +124,7 @@ class App(Tk):
                             "#a1e2a1")
                 self.hexagons.append(h)
                 # h.draw_coordinate(h.x,h.y,str(r),chr(c+97))
-                # h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
+                h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
                 # h.convert_coordinate(h.x,h.y,str(r),(c))
 
     def create_hexes_board(self): #continuation of grid. Takes the printed hexes and aligned them in a desired manner
@@ -189,10 +189,10 @@ class App(Tk):
                 self.state = 0
                 ai.board.Board.player_type = 1             
                 if len(self.hexagons_white)>4:
-                    for i in range(len(self.hexagons_white)):
-                        if game_rules.diag1_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag2_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag3_line5(self.hexagons_white,self.hexagons_white) == 4:
-                            print("white - You won by line of 5!")
-                            break                        
+                    # for i in range(len(self.hexagons_white)):
+                    if game_rules.diag1_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag2_line5(self.hexagons_white,self.hexagons_white) == 4 or game_rules.diag3_line5(self.hexagons_white,self.hexagons_white) == 4:
+                        print("white - You won by line of 5!")
+                            # break                        
                 if len(self.hexagons_white)>5:
                     for i in range(len(self.hexagons_black)):
                         if self.out_of_boundaries(self.hexagons_black[i],self.hexagons_white):
@@ -227,10 +227,10 @@ class App(Tk):
                 self.state = 1
                 ai.board.Board.player_type = 0
                 if len(self.hexagons_black)>4:
-                    for i in range(len(self.hexagons_black)):
-                        if game_rules.diag1_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag2_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag3_line5(self.hexagons_black,self.hexagons_black) == 4:
-                            print("black - You won by line of 5!")
-                            break
+                    # for i in range(len(self.hexagons_black)):
+                    if game_rules.diag1_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag2_line5(self.hexagons_black,self.hexagons_black) == 4 or game_rules.diag3_line5(self.hexagons_black,self.hexagons_black) == 4:
+                        print("black - You won by line of 5!")
+                            # break
                 if len(self.hexagons_black)>5:
                     for i in range(len(self.hexagons_white)):
                         if self.out_of_boundaries(self.hexagons_white[i],self.hexagons_black):
