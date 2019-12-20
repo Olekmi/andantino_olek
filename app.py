@@ -49,6 +49,7 @@ class App(Tk):
     def init_board_object(self):
         first_player_hex = self.first_hex
         depth = 0
+        game_over = 0
         player1_hexes = []
         player2_hexes = []
         if(len(player2_hexes) == 0) and (len(player1_hexes) == 0):
@@ -57,7 +58,7 @@ class App(Tk):
         score = 0
         possible_moves = self.first_n
         player_type = self.state
-        init_board_object = board.Board(first_player_hex,depth,player1_hexes,player2_hexes,score,possible_moves,player_type)
+        init_board_object = board.Board(first_player_hex,depth, game_over, player1_hexes,player2_hexes,score,possible_moves,player_type)
         self.game_board = init_board_object
 
     def callback0(self):

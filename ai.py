@@ -7,7 +7,7 @@ import board
 from operator import itemgetter
 
 def MinMax (position,depth, alpha,beta,max_player,hexagons_board): 
-    if depth == 0:# or self.game_over == 1:    
+    if depth == 0:# or position.game_over == 1:    
         return position.score, position.hexagon
     target = []        
     if max_player:
@@ -15,7 +15,8 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
         sorted_children = []
         get_board = []
         for possible_move in position.possible_moves:
-            sorted_children.append(position.child(position,possible_move,hexagons_board))   
+            if not position.game_over:
+                sorted_children.append(position.child(position,possible_move,hexagons_board))   
         sorted_children.sort(key=lambda x: x.score, reverse=True)
         # To return a new list, use the sorted() built-in function...
         get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)
@@ -34,7 +35,8 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
         score = math.inf
         sorted_children = []
         for possible_move in position.possible_moves:
-            sorted_children.append(position.child(position,possible_move,hexagons_board))   
+            if not position.game_over:
+                sorted_children.append(position.child(position,possible_move,hexagons_board))   
         sorted_children.sort(key=lambda x: x.score, reverse=True)
         get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)       
         for possible_board in get_board:
@@ -49,7 +51,7 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
         return score, target
 
 def NegaMax (position,depth, alpha,beta,max_player,hexagons_board): 
-    if depth == 0:# or self.game_over == 1:    
+    if depth == 0:# or position.game_over == 1:    
         return position.score, position.hexagon      
     best_move = [] 
     best_score = -math.inf
