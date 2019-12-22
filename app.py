@@ -125,7 +125,7 @@ class App(Tk):
                             "#a1e2a1")
                 self.hexagons.append(h)
                 # h.draw_coordinate(h.x,h.y,str(r),chr(c+97))
-                # h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
+                h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
                 # h.convert_coordinate(h.x,h.y,str(r),(c))
 
     def create_hexes_board(self): #continuation of grid. Takes the printed hexes and aligned them in a desired manner
@@ -169,7 +169,7 @@ class App(Tk):
         hex_closest = self.closest_hex(xy)
 
         if (hex_closest in self.first_n) and (hex_closest not in self.hex_glob): 
-            self.depth_game += 1                      
+            # self.depth_game += 1                      
             if self.state == 1:
                 self.hex_glob.append(hex_closest)  
                 for i in draw.neighbour(hex_closest,self.hexagons_board):
@@ -202,15 +202,15 @@ class App(Tk):
             else:
                 if self.game_type == 0:
                     ai.board.Board.player_type = 1
-                    eval, hex_closest = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)#to use NegaMax just overwrite Minmax
+                    eval = ai.MinMax(self.game_board,config.depth,-math.inf,math.inf,True,self.hexagons_board)#to use NegaMax just overwrite Minmax
                     # print("eval",eval)
-                    self.hex_glob.append(hex_closest)
-                    self.game_board = self.game_board.child(self.game_board,hex_closest,self.hexagons_board)
+                    self.hex_glob.append(ai.Ai_move.target)
+                    self.game_board = self.game_board.child(self.game_board,ai.Ai_move.target,self.hexagons_board)
 
                 else:  
-                    self.hex_glob.append(hex_closest)
+                    self.hex_glob.append(ai.Ai_move.target)
                 # print("gamedepth",self.depth_game)                 
-                for i in draw.neighbour(hex_closest,self.hexagons_board): #possible moves
+                for i in draw.neighbour(ai.Ai_move.target,self.hexagons_board): #possible moves
                     self.neigh_append.append(i)
                 inter_list = self.intersection(self.neigh_append)
                 self.first_n = list(inter_list )
@@ -222,8 +222,8 @@ class App(Tk):
                 self.first_n = neighbours_temp
                 if len(self.intersection(self.neigh_append)) <= 2:
                     draw.sub_first_hex(self.neigh_append,self.can)
-                draw.draw_black(self.can,hex_closest,self.size)
-                self.hexagons_black.append(hex_closest)  
+                draw.draw_black(self.can,ai.Ai_move.target,self.size)
+                self.hexagons_black.append(ai.Ai_move.target)  
                 draw.draw_neighb(self.can,self.first_n,self.size)
                 self.state = 1
                 ai.board.Board.player_type = 0
