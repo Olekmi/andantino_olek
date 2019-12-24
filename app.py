@@ -125,7 +125,7 @@ class App(Tk):
                             "#a1e2a1")
                 self.hexagons.append(h)
                 # h.draw_coordinate(h.x,h.y,str(r),chr(c+97))
-                h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
+                # h.draw_coordinate(h.x,h.y,str(r),str(c))#to print hexes coords on the board
                 # h.convert_coordinate(h.x,h.y,str(r),(c))
 
     def create_hexes_board(self): #continuation of grid. Takes the printed hexes and aligned them in a desired manner

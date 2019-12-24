@@ -25,29 +25,30 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
         score = -math.inf
         sorted_children = []
         get_board = []
-        for possible_move in position.possible_moves:
-            if not position.game_over: #thanks to it when there's game_over it doesn't search anymore
+        if not position.game_over: #thanks to it when there's game_over it doesn't search anymore        
+            for possible_move in position.possible_moves:
+
                 sorted_children.append(position.child(position,possible_move,hexagons_board))   
         if depth < config.depth:        
             sorted_children.sort(key=lambda x: x.score, reverse=True)
             # To return a new list, use the sorted() built-in function...
-            get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)
-            for possible_board in get_board:
-                print("possible_board", possible_board.row," ", move.col,"\n")
+            # get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)
+            for possible_board in sorted_children:
+                print("poss")
+                # print("possible_board", possible_board.row," ", move.col,"\n")
                 # new_child = position.child(position, possible_move, hexagons_board)#new board
                 value = MinMax(possible_board,depth-1, alpha,beta,False,hexagons_board)
                 if value > score:
                     score = value
                     alpha = max(alpha, score)
-                    if depth == config.depth - 1: 
-                        target = possible_board.hexagon
-                        Ai_move.set_target(target)
-                        if (beta <= alpha):# and (config.depth == depth):
-                            target = possible_board.hexagon
-                            Ai_move.set_target(target)
-                            break 
-            # Ai_move = Ai(target)  
-           
+                    target = possible_board.hexagon
+                    Ai_move.set_target(target)                    
+                if (beta <= alpha):# and (config.depth == depth):
+                    # target = possible_board.hexagon
+                    # Ai_move.set_target(target)
+                    break    
+            target = possible_board.hexagon
+            Ai_move.set_target(target)           
             return score
         else:
             for possible_board in sorted_children:
@@ -57,38 +58,41 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                     score = value
 
                     alpha = max(alpha, score)
-                    if depth == config.depth - 1: 
-                        target = possible_board.hexagon
-                        Ai_move.set_target(target)
-                        if (beta <= alpha):# and (config.depth == depth):
-                            target = possible_board.hexagon
-                            Ai_move.set_target(target)
-                            break              
+                    target = possible_board.hexagon
+                    Ai_move.set_target(target)
+                if (beta <= alpha):# and (config.depth == depth):
+                    # target = possible_board.hexagon
+                    # Ai_move.set_target(target)
+                    break    
+            target = possible_board.hexagon
+            Ai_move.set_target(target)                                       
             return score 
 
     else:
         score = math.inf
         sorted_children = []
-        for possible_move in position.possible_moves:
-            if not position.game_over:
+        if not position.game_over:        
+            for possible_move in position.possible_moves:
+            # if not position.game_over:
                 sorted_children.append(position.child(position,possible_move,hexagons_board))  
         if depth < config.depth:           
-            sorted_children.sort(key=lambda x: x.score, reverse=True)
-            get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)       
-            for possible_board in get_board:
+            sorted_children.sort(key=lambda x: x.score, reverse=False)
+            # get_board = sorted(sorted_children, key=lambda x: x.score, reverse=False)       
+            for possible_board in sorted_children:
                 # new_child = position.child(position, possible_move,hexagons_board)
                 value = MinMax(possible_board,depth-1, alpha,beta,True,hexagons_board)
                 if value < score:
                     score = value
 
                     beta = min(beta,score)
-                    if depth == config.depth - 1:
-                        target = possible_board.hexagon
-                        Ai_move.set_target(target)
-                        if (beta <= alpha):# and (config.depth == depth):
-                            target = possible_board.hexagon
-                            Ai_move.set_target(target)
-                            break            
+                    target = possible_board.hexagon
+                    Ai_move.set_target(target)
+                if (beta <= alpha):# and (config.depth == depth):
+                    # target = possible_board.hexagon
+                    # Ai_move.set_target(target)
+                    break    
+            target = possible_board.hexagon
+            Ai_move.set_target(target)                                     
             return score
         else:
             for possible_board in sorted_children:
@@ -98,13 +102,14 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
                     score = value
 
                     beta = min(beta,score)
-                    if depth == config.depth - 1:
-                        target = possible_board.hexagon
-                        Ai_move.set_target(target)
-                        if (beta <= alpha):# and (config.depth == depth):
-                            target = possible_board.hexagon
-                            Ai_move.set_target(target)
-                            break             
+                    target = possible_board.hexagon
+                    Ai_move.set_target(target)   
+                if (beta <= alpha):# and (config.depth == depth):
+                    # target = possible_board.hexagon
+                    # Ai_move.set_target(target)
+                    break     
+            target = possible_board.hexagon
+            Ai_move.set_target(target)                                   
             return score
 
 def NegaMax (position,depth, alpha,beta,max_player,hexagons_board): 
