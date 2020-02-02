@@ -16,6 +16,8 @@ class Board():
         self.score = score
         self.possible_moves = possible_moves
         self.player_type = player_type
+        if game_over == 1:
+            self.game_over = 1
         if(len(player2_hexes) == 0) and (len(player1_hexes) == 0):
             self.player_hexes = player1_hexes
         else:
@@ -115,6 +117,7 @@ class Board():
 
     def evaluation_function (self,player,player_hexes,second_player,first_player,hexagons_board):
         child_score = 0
+        self.game_over = 0
                        
         if game_rules.diag3_line5(first_player,first_player)>1:
             # self.game_over = 1
