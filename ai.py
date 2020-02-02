@@ -33,7 +33,6 @@ def MinMax (position,depth, alpha,beta,max_player,hexagons_board):
             # To return a new list, use the sorted() built-in function...
             get_board = sorted(sorted_children, key=lambda x: x.score, reverse=True)
             for possible_board in get_board:
-                print("possible_board", possible_board.row," ", move.col,"\n")
                 # new_child = position.child(position, possible_move, hexagons_board)#new board
                 value = MinMax(possible_board,depth-1, alpha,beta,False,hexagons_board)
                 if value > score:

@@ -95,18 +95,18 @@ class Board():
             child_p1_list.append(move)
             if len(child_p1_list) > 0:
                 child_score = self.evaluation_function(child_p1_list,child_p2_list,child_p2_list,child_p1_list,hexagons_board)
-                print("child p1 lines:", child_score)
+                # print("child p1 lines:", child_score)
         else:
             child_p2_list.append(move)
             if len(child_p2_list) > 0:
                 child_score = self.evaluation_function(child_p1_list,child_p2_list,child_p1_list,child_p2_list,hexagons_board)
-                print("child p2 lines:", child_score)
+                # print("child p2 lines:", child_score)
         child_depth = board.depth
-        print("child depth", board.depth)
+        # print("child depth", board.depth)
         child_gameover = board.game_over
-        print("child game over", board.game_over) 
+        # print("child game over", board.game_over) 
         child_hexagon = move
-        print("child move", move.row," ", move.col,"\n") 
+        # print("child move", move.row," ", move.col,"\n") 
         child_player_hexes = child_p1_list+child_p2_list
         child_possible_moves = self.possible_move(child_player_hexes,hexagons_board)
         final_child = Board(child_hexagon,child_depth, child_gameover, child_p1_list,child_p2_list,child_score,child_possible_moves,child_player_type)
